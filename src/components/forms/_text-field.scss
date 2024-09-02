@@ -1,220 +1,129 @@
 // Text Fields
 
 .text-field {
-    position: relative;
-  
-    &__input {
-      background: #fff !important;
-      border-radius: $text-field-border-radius;
-      border: 1px solid $text-field-unfocused-color;
-      height: $text-field-height;
-      font-weight: $text-field-font-weight;
-      line-height: $text-field-height;
-      outline: none;
-      padding: 0 0.5rem;
-      transition: border-bottom $transition-duration ease-in;
-  
-      &:focus {
-        border: 1px solid $text-field-accent-color;
-  
-        + label {
-          color: $text-field-accent-color;
-        }
-      }
-      &:focus
-        + .text-field__input__placeholder
-        .text-field__input__placeholder__label,
-      :not(input[value=""])
-        + .text-field__input__placeholder
-        .text-field__input__placeholder__label {
-        background-color: #fff;
-        background-clip: content-box;
-        color: black;
-        transform: translate(0, -85%);
-      }
-      &:focus
-        + .text-field__input__placeholder
-        .text-field__input__placeholder__label {
-        border-color: $primary-color;
-        color: $text-field-placeholder-color;
-      }
-  
-      &__placeholder {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border: 3px solid transparent;
-        background-color: transparent;
-        pointer-events: none;
-        display: flex;
-        align-items: center;
-  
-        &__label {
-          padding: 0 0.5rem;
-          background-color: transparent;
-          transform: translate(0);
-          color: black;
-          transition:
-            transform 0.15s ease-out,
-            font-size 0.15s ease-out,
-            background-color 0.2s ease-out,
-            color 0.15s ease-out;
-        }
-      }
-    }
-  
-    &__textarea {
-      background: #fff !important;
-      border-radius: $text-field-border-radius;
-      border: 1px solid $text-field-unfocused-color;
-      height: $text-field-height;
-      font-weight: $text-field-font-weight;
-      line-height: $text-field-height;
-      outline: none;
-      padding: 0 0.5rem;
-      transition: border-bottom $transition-duration ease-in;
+  position: relative;
 
-      &:focus {
-        border: 1px solid $text-field-accent-color;
-  
-        + label {
-          color: $text-field-accent-color;
-        }
-      }
-      &:focus
-        + .text-field__textarea__placeholder
-        .text-field__textarea__placeholder__label,
-      :not(textarea[value=""])
-        + .text-field__textarea__placeholder
-        .text-field__textarea__placeholder__label {
-        background-color: #fff;
-        background-clip: content-box;
-        color: black;
-        transform: translate(0, -85%);
-      }
-      &:focus
-        + .text-field__textarea__placeholder
-        .text-field__textarea__placeholder__label {
-        border-color: $primary-color;
-        color: $text-field-placeholder-color;
-      }
-  
-      &__placeholder {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border: 3px solid transparent;
-        background-color: transparent;
-        pointer-events: none;
-        display: flex;
-        align-items: center;
-  
-        &__label {
-          padding: 0 0.5rem;
-          background-color: transparent;
-          transform: translate(0);
-          color: black;
-          transition:
-            transform 0.15s ease-out,
-            font-size 0.15s ease-out,
-            background-color 0.2s ease-out,
-            color 0.15s ease-out;
-        }
-      } 
-  }
-  
-
-  /*
-  .text {
-    font-size: 1.4rem;
+  &__input {
+    background: #fff !important;
+    border-radius: $text-field-border-radius;
+    border: 1px solid $text-field-unfocused-color;
+    height: $text-field-height;
+    font-weight: $text-field-font-weight;
+    line-height: $text-field-height;
+    outline: none;
     padding: 0 0.5rem;
-    background-color: transparent;
-    transform: translate(0);
-    color: black;
-    transition:
-      transform 0.15s ease-out,
-      font-size 0.15s ease-out,
-      background-color 0.2s ease-out,
-      color 0.15s ease-out;
-  }
-  input,
-  .placeholder-text {
-    font-size: 1.4rem;
-    padding: 0 1.2rem;
-  }
+    transition: border-bottom $transition-duration ease-in;
 
-  @media (max-width: 40rem) {
-    input {
-      width: 70vw;
+    &:focus {
+      border: 1px solid $text-field-accent-color;
+
+      + label {
+        color: $text-field-accent-color;
+      }
     }
-  }
-  */
-}
-
-/*
-.text-field {
-    position: relative;
-
-    // One Line Input
-    &__input {
-        background: rgba(0, 0, 0, 0) !important;
-        border: 0;
-        border-bottom: 1px solid $text-field-unfocused-color;
-        height: $text-field-height;
-        width: 100%;
-        font-size: 16px;
-        font-weight: $text-field-font-weight;
-        line-height: $text-field-height;
-        color: $text-field-color;
-        outline: none;
-        margin-top: 12px;
-        padding: 0;
-        transition: border-bottom $transition-duration ease-in;
-
-        &:focus {
-            border-bottom: 1px solid $text-field-accent-color;
-
-            +label {
-                color: $text-field-accent-color;
-            }
-        }
-
-        // Textarea Input
-        &--textarea {
-            font-family: inherit;
-            color: $text-field-placeholder-color;
-            height: 100%;
-
-            &:focus {
-                color: $text-field-color;
-            }
-
-            &.text-field__input--expandable {
-                resize: vertical;
-            }
-        }
+    &:focus
+      + .text-field__input__placeholder
+      .text-field__input__placeholder__label,
+    :not(input[value=""])
+      + .text-field__input__placeholder
+      .text-field__input__placeholder__label {
+      background-color: #fff;
+      background-clip: content-box;
+      color: black;
+      transform: translate(0, -85%);
+    }
+    &:focus
+      + .text-field__input__placeholder
+      .text-field__input__placeholder__label {
+      border-color: $primary-color;
+      color: $text-field-placeholder-color;
     }
 
-    &__label {
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 12px;
-        color: $text-field-unfocused-color;
-        transition: all $transition-duration ease-in;
-        cursor: text;
-    }
-}
+    &__placeholder {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 3px solid transparent;
+      background-color: transparent;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
 
-// Placeholders
-::placeholder {
-    color: $text-field-placeholder-color;
-    font-weight: 300;
+      &__label {
+        padding: 0 0.5rem;
+        background-color: transparent;
+        transform: translate(0);
+        color: black;
+        transition:
+          transform 0.15s ease-out,
+          font-size 0.15s ease-out,
+          background-color 0.2s ease-out,
+          color 0.15s ease-out;
+      }
+    }
+  }
+
+  &__textarea {
+    background: #fff !important;
+    border-radius: $text-field-border-radius;
+    border: 1px solid $text-field-unfocused-color;
+    height: $text-field-height;
+    font-weight: $text-field-font-weight;
+    line-height: $text-field-height;
+    outline: none;
+    padding: 0 0.5rem;
+    transition: border-bottom $transition-duration ease-in;
+
+    &:focus {
+      border: 1px solid $text-field-accent-color;
+
+      + label {
+        color: $text-field-accent-color;
+      }
+    }
+    &:focus
+      + .text-field__textarea__placeholder
+      .text-field__textarea__placeholder__label,
+    :not(textarea[value=""])
+      + .text-field__textarea__placeholder
+      .text-field__textarea__placeholder__label {
+      background-color: #fff;
+      background-clip: content-box;
+      color: black;
+      transform: translate(0, -85%);
+    }
+    &:focus
+      + .text-field__textarea__placeholder
+      .text-field__textarea__placeholder__label {
+      border-color: $primary-color;
+      color: $text-field-placeholder-color;
+    }
+
+    &__placeholder {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 3px solid transparent;
+      background-color: transparent;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+
+      &__label {
+        padding: 0 0.5rem;
+        background-color: transparent;
+        transform: translate(0);
+        color: black;
+        transition:
+          transform 0.15s ease-out,
+          font-size 0.15s ease-out,
+          background-color 0.2s ease-out,
+          color 0.15s ease-out;
+      }
+    }
+  }
 }
-*/

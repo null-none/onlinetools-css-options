@@ -5,7 +5,6 @@
     margin: 0 0 10px;
     font-size: 16px;
     line-height: 24px;
-
     &__input {
         position: absolute;
         top: 4px;
@@ -15,13 +14,10 @@
         opacity: 0;
         z-index: 0;
     }
-
-    // Unchecked
     &__label {
         display: block;
         padding: 0 0 0 24px;
         cursor: pointer;
-
         &:before {
             content: '';
             position: absolute;
@@ -35,7 +31,6 @@
             z-index: 1;
             transition: border-color .28s cubic-bezier(.4, 0, .2, 1);
         }
-
         &:after {
             content: '';
             position: absolute;
@@ -50,8 +45,6 @@
             transition: transform .28s cubic-bezier(.4, 0, .2, 1);
         }
     }
-
-    // Checked
     &__input:checked + &__label {
         &:before {
             border-color: $primary-color;
@@ -61,8 +54,6 @@
             transform: scale(1, 1);
         }
     }
-
-    // Focus
     &__input:focus + &__label {
         &:before {
             outline: 1px dotted currentColor;

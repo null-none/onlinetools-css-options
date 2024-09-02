@@ -1,11 +1,9 @@
-// Switch
 .switch {
     display: inline-block;
     position: relative;
     margin: 0 0 10px;
     font-size: 16px;
     line-height: 24px;
-
     &__input {
         position: absolute;
         top: 0;
@@ -15,8 +13,6 @@
         opacity: 0;
         z-index: 0;
     }
-
-    // Unchecked
     &__label {
         display: block;
         padding: 0 0 0 44px;
@@ -50,8 +46,6 @@
             transition-property: left, background-color;
         }
     }
-
-    // Checked
     &__input:checked + &__label {
         &:before {
             background-color: rgba($primary-color, .5);
@@ -62,8 +56,6 @@
             background-color: $primary-color;
         }
     }
-
-    // Focused
     &__input:focus + &__label {
         &:after {
             outline: 1px dotted currentColor;
