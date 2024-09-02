@@ -24,7 +24,7 @@
     &:focus
       + .text-field__input__placeholder
       .text-field__input__placeholder__label,
-    &:not(input[value=""])
+    &:not(:placeholder-shown)
       + .text-field__input__placeholder
       .text-field__input__placeholder__label {
       background-color: $background;
@@ -76,7 +76,7 @@
     border: 1px solid $text-field-unfocused-color;
     height: $text-field-height;
     font-weight: $text-field-font-weight;
-    padding: 0 0.5rem;
+    padding: 10px;
     transition: border-bottom $transition-duration ease-in;
     resize: none;
     height: 78px;
@@ -94,13 +94,13 @@
     &:focus
       + .text-field__textarea__placeholder
       .text-field__textarea__placeholder__label,
-    :not(textarea[value=""])
+    &:not(:placeholder-shown)
       + .text-field__textarea__placeholder
       .text-field__textarea__placeholder__label {
       background-color: $background;
       background-clip: content-box;
       color: $black-color;
-      transform: translate(0, -180%);
+      transform: translate(0, -220%);
       font-size: 13px;
       font-weight: $text-field-font-weight;
     }

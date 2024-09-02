@@ -33,6 +33,7 @@
                   id="input"
                   name="input"
                   autocomplete="off"
+                  placeholder=""
                   class="text-field__input"
                   value=""
                   aria-labelledby="placeholder-input"
@@ -59,10 +60,9 @@
                   name="textarea"
                   autocomplete="off"
                   class="text-field__textarea"
-                  value=""
+                  placeholder=""
                   aria-labelledby="placeholder-textarea"
-                >
-                </textarea>
+                ></textarea>
                 <label
                   class="text-field__textarea__placeholder"
                   for="fname"
@@ -200,6 +200,22 @@
                 </div>
               </div>
             </div>
+            <div class="pb-5">
+              <div>
+                <div class="select">
+                  <select class="select__select" required>
+                    <option value="" disabled selected></option>
+                    <option value="arial">Arial</option>
+                    <option value="helvetica">Helvetica</option>
+                    <option value="roboto">Roboto</option>
+                  </select>
+                  <label class="select__label">Select the text font</label>
+                </div>
+                <div class="supporting-text">
+                  Switch to a custom font (above and specify the font URL here)
+                </div>
+              </div>
+            </div>
 
             <div class="pb-5">
               <div>
@@ -223,104 +239,6 @@
                 >
               </div>
             </div>
-            <!--
-
-              <div>
-                <h4>Radio buttons</h4>
-                <div class="radio">
-                  <input
-                    type="radio"
-                    name="radio"
-                    id="radio1"
-                    class="radio__input"
-                    checked=""
-                  />
-                  <label for="radio1" class="radio__label">Radio 1</label>
-                </div>
-                <br />
-                <div class="radio">
-                  <input
-                    type="radio"
-                    name="radio"
-                    id="radio2"
-                    class="radio__input"
-                  />
-                  <label for="radio2" class="radio__label">Radio 2</label>
-                </div>
-                <br />
-                <div class="radio">
-                  <input
-                    type="radio"
-                    name="radio"
-                    id="radio3"
-                    class="radio__input"
-                  />
-                  <label for="radio3" class="radio__label">Radio 3</label>
-                </div>
-                <br />
-              </div>
-              <div>
-                <h4>Switches</h4>
-                <div class="switch">
-                  <input
-                    type="checkbox"
-                    id="switch1"
-                    class="switch__input"
-                    checked=""
-                  />
-                  <label for="switch1" class="switch__label">Switch 1</label>
-                </div>
-                <br />
-                <div class="switch">
-                  <input type="checkbox" id="switch2" class="switch__input" />
-                  <label for="switch2" class="switch__label">Switch 2</label>
-                </div>
-                <br />
-                <div class="switch">
-                  <input type="checkbox" id="switch3" class="switch__input" />
-                  <label for="switch3" class="switch__label">Switch 3</label>
-                </div>
-                <br />
-              </div>
-            </div>
-            <div>
-              <h4>Select</h4>
-              <div class="select">
-                <select class="select__select" required>
-                  <option value="" disabled selected></option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
-                <span class="select__highlight"></span>
-                <span class="select__bar"></span>
-                <label class="select__label">Select</label>
-              </div>
-            </div>
-            <div>
-              <h4>Tooltips</h4>
-              <div>
-                <span class="tooltip--top" data-tooltip="I'm at the top!"
-                  >tooltip top</span
-                >
-              </div>
-              <div>
-                <span class="tooltip--right" data-tooltip="I'm on the right!"
-                  >tooltip right</span
-                >
-              </div>
-              <div>
-                <span class="tooltip--bottom" data-tooltip="I'm at the bottom!"
-                  >tooltip bottom</span
-                >
-              </div>
-              <div>
-                <span class="tooltip--left" data-tooltip="I'm on the left!"
-                  >tooltip left</span
-                >
-              </div>
-            </div>
-            -->
           </div>
         </article>
       </div>

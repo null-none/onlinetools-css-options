@@ -27,7 +27,7 @@
   border-radius: 8px;
   border: 1px solid #D4D5DE;
   height: 36px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 36px;
   outline: none;
   padding: 0 0.5rem;
@@ -39,19 +39,19 @@
 .text-field__input:focus + label {
   color: #D4D5DE;
 }
-.text-field__input:focus + .text-field__input__placeholder .text-field__input__placeholder__label, .text-field__input:not(input[value=""]) + .text-field__input__placeholder .text-field__input__placeholder__label {
+.text-field__input:focus + .text-field__input__placeholder .text-field__input__placeholder__label, .text-field__input:not(:placeholder-shown) + .text-field__input__placeholder .text-field__input__placeholder__label {
   background-color: #F3F6FA;
   background-clip: content-box;
   color: #31344B;
   transform: translate(0, -85%);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .text-field__input:focus + .text-field__input__placeholder .text-field__input__placeholder__label {
   border-color: #31344B;
   color: #31344B;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .text-field__input__placeholder {
   position: absolute;
@@ -78,8 +78,8 @@
   border-radius: 8px;
   border: 1px solid #D4D5DE;
   height: 36px;
-  font-weight: 500;
-  padding: 0 0.5rem;
+  font-weight: 400;
+  padding: 10px;
   transition: border-bottom 150ms ease-in;
   resize: none;
   height: 78px;
@@ -92,20 +92,19 @@
 .text-field__textarea:focus + label {
   color: #D4D5DE;
 }
-.text-field__textarea:focus + .text-field__textarea__placeholder .text-field__textarea__placeholder__label,
-.text-field__textarea :not(textarea[value=""]) + .text-field__textarea__placeholder .text-field__textarea__placeholder__label {
+.text-field__textarea:focus + .text-field__textarea__placeholder .text-field__textarea__placeholder__label, .text-field__textarea:not(:placeholder-shown) + .text-field__textarea__placeholder .text-field__textarea__placeholder__label {
   background-color: #F3F6FA;
   background-clip: content-box;
   color: #31344B;
-  transform: translate(0, -180%);
+  transform: translate(0, -220%);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .text-field__textarea:focus + .text-field__textarea__placeholder .text-field__textarea__placeholder__label {
   border-color: #31344B;
   color: #31344B;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .text-field__textarea__placeholder {
   position: absolute;
@@ -154,7 +153,7 @@
   padding: 2px 0 0 24px;
   color: #31344B;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
 }
 .checkbox__label:before {
@@ -217,7 +216,7 @@
   cursor: pointer;
   color: #31344B;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .radio__label:before {
   content: "";
@@ -276,7 +275,7 @@
   padding: 0 0 0 44px;
   color: #31344B;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
 }
 .switch__label:before {
@@ -322,11 +321,11 @@
 }
 .select__select {
   position: relative;
-  font-family: inherit;
-  background: #fff !important;
+  background: #F3F6FA;
   width: 350px;
-  padding: 10px 10px 10px 0;
-  font-size: 18px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 300;
   border-radius: 8px;
   border: 1px solid #D4D5DE;
 }
@@ -344,70 +343,25 @@
   pointer-events: none;
 }
 .select__select:focus ~ .select__label, .select__select:valid ~ .select__label {
-  background: #fff !important;
+  background-color: #F3F6FA;
+  background-clip: content-box;
   color: #31344B;
+  font-size: 13px;
+  font-weight: 400;
   top: -10px;
+  left: -5px;
   transition: 0.2s ease all;
-  font-size: 14px;
-}
-.select__text {
-  position: relative;
-  font-family: inherit;
-  background-color: transparent;
-  width: 350px;
-  padding: 10px 10px 10px 0;
-  font-size: 18px;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  appearance: none;
-  -webkit-appearance: none;
-}
-.select__text:focus ~ .select__bar:before, .select__text:focus ~ .select__bar:after {
-  width: 50%;
-}
-.select__text:focus {
-  outline: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 .select__label {
-  color: rgba(0, 0, 0, 0.26);
-  font-size: 18px;
-  font-weight: normal;
+  padding: 0 1rem;
+  color: #656778;
+  font-size: 16px;
+  font-weight: 300;
   position: absolute;
   pointer-events: none;
-  left: 0;
+  left: -5px;
   top: 10px;
   transition: 0.2s ease all;
-}
-.select__bar {
-  position: relative;
-  display: block;
-  width: 350px;
-}
-.select__bar:before, .select__bar:after {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: hsl(213, 39%, 52%);
-  transition: 0.2s ease all;
-}
-.select__bar:before {
-  left: 50%;
-}
-.select__bar:after {
-  right: 50%;
-}
-.select__highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
 }
 
 [data-tooltip] {
@@ -864,40 +818,6 @@
   margin-right: 0.25rem;
 }
 
-.pa-1 {
-  padding-top: 0.25rem;
-  padding-left: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.ma-1 {
-  margin-top: 0.25rem;
-  margin-left: 0.25rem;
-  margin-bottom: 0.25rem;
-  margin-right: 0.25rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -928,40 +848,6 @@
 
 .mr-2 {
   margin-right: 0.5rem;
-}
-
-.pa-2 {
-  padding-top: 0.5rem;
-  padding-left: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.ma-2 {
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
-  margin-bottom: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .pt-3 {
@@ -996,40 +882,6 @@
   margin-right: 0.75rem;
 }
 
-.pa-3 {
-  padding-top: 0.75rem;
-  padding-left: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.ma-3 {
-  margin-top: 0.75rem;
-  margin-left: 0.75rem;
-  margin-bottom: 0.75rem;
-  margin-right: 0.75rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.mx-3 {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1060,40 +912,6 @@
 
 .mr-4 {
   margin-right: 1rem;
-}
-
-.pa-4 {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 1rem;
-}
-
-.ma-4 {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .pt-5 {
@@ -1128,40 +946,6 @@
   margin-right: 1.25rem;
 }
 
-.pa-5 {
-  padding-top: 1.25rem;
-  padding-left: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.ma-5 {
-  margin-top: 1.25rem;
-  margin-left: 1.25rem;
-  margin-bottom: 1.25rem;
-  margin-right: 1.25rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
 .pt-auto {
   padding-top: auto;
 }
@@ -1192,38 +976,4 @@
 
 .mr-auto {
   margin-right: auto;
-}
-
-.pa-auto {
-  padding-top: auto;
-  padding-left: auto;
-  padding-bottom: auto;
-  padding-right: auto;
-}
-
-.ma-auto {
-  margin-top: auto;
-  margin-left: auto;
-  margin-bottom: auto;
-  margin-right: auto;
-}
-
-.px-auto {
-  padding-left: auto;
-  padding-right: auto;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.py-auto {
-  padding-top: auto;
-  padding-bottom: auto;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
 }

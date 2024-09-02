@@ -5,20 +5,6 @@ $sides: (
   "b": "bottom",
   "l": "left",
   "r": "right",
-  "a": (
-    "top",
-    "left",
-    "bottom",
-    "right",
-  ),
-  "x": (
-    "left",
-    "right",
-  ),
-  "y": (
-    "top",
-    "bottom",
-  ),
 );
 
 @each $space in $spacings {
