@@ -1,55 +1,77 @@
-/**
- * $sm: 576px;
- * $md: 768px;
- * $lg: 992px;
- * $xl: 1200px;
- **/
+@use "sass:math";
 
- @use "sass:math";
+@mixin GRID {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+@mixin CELL {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
 
- 
- @mixin GRID {
-   display: flex;
-   flex-wrap: wrap;
- }
- 
- @mixin CELL {
-   box-sizing: border-box;
-   flex-shrink: 0;
- }
- 
- $breakpoints: (
-   sm:   576px,
-   md:   768px,
-   lg:   992px,
-   xl:   1200px
- );
- 
- .grid            { @include GRID; }
- .grid.\-column   { flex-direction: column; }
- .grid.\-reverse  { direction: rtl; }
- .grid.\-top      { align-items: flex-start; }
- .grid.\-middle   { align-items: center; }
- .grid.\-bottom   { align-items: flex-end; }
- .grid.\-stretch  { align-items: stretch; }
- .grid.\-baseline { align-items: baseline; }
- .grid.\-left     { justify-content: flex-start; }
- .grid.\-center   { justify-content: center; }
- .grid.\-right    { justify-content: flex-end; }
- .grid.\-between  { justify-content: space-between; }
- .grid.\-around   { justify-content: space-around; }
- 
- .cell            { @include CELL; }
- .cell.\-fill     { width: 0; min-width: 0; flex-grow: 1; }
- 
- 
- @each $size, $value in $breakpoints {
-    @media (min-width: $value) {
-        @for $index from 1 through $total-columns {
-            .cell.\-#{$size}-#{$index}of#{$total-columns} {
-                width: percentage(math.div($index, $total-columns));
-            }
-        }
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+.grid {
+  @include GRID;
+}
+.grid.\-column {
+  flex-direction: column;
+}
+.grid.\-reverse {
+  direction: rtl;
+}
+.grid.\-top {
+  align-items: flex-start;
+}
+.grid.\-middle {
+  align-items: center;
+}
+.grid.\-bottom {
+  align-items: flex-end;
+}
+.grid.\-stretch {
+  align-items: stretch;
+}
+.grid.\-baseline {
+  align-items: baseline;
+}
+.grid.\-left {
+  justify-content: flex-start;
+}
+.grid.\-center {
+  justify-content: center;
+}
+.grid.\-right {
+  justify-content: flex-end;
+}
+.grid.\-between {
+  justify-content: space-between;
+}
+.grid.\-around {
+  justify-content: space-around;
+}
+
+.cell {
+  @include CELL;
+}
+.cell.\-fill {
+  width: 0;
+  min-width: 0;
+  flex-grow: 1;
+}
+
+@each $size, $value in $breakpoints {
+  @media (min-width: $value) {
+    @for $index from 1 through $total-columns {
+      .cell.\-#{$size}-#{$index}of#{$total-columns} {
+        width: percentage(math.div($index, $total-columns));
+      }
     }
- }
+  }
+}

@@ -1,24 +1,25 @@
 // Global
 $transition-duration: 150ms !default;
 $primary-color: hsl(213, 39%, 52%) !default;
-$border-color: #757575 !default;
+$border-color: #D4D5DE !default;
 $black-color: #31344B !default;
+$background: #F3F6FA !default;
 
 // Cards
-$card-background-color: #F3F6FA !default;
+$card-background-color: $background;
 $card-padding: 10px !default;
 $card-margin-bottom: 48px !default;
 
 // Forms
 $text-field-border-radius: 8px !default;
 $text-field-height: 36px !default;
-$text-field-font-weight: 400 !default;
-$text-field-placeholder-color: $primary-color !default;
-$text-field-unfocused-color: rgba(0, 0, 0, .5) !default;
+$text-field-font-weight: 500 !default;
+$text-field-placeholder-color: $black-color !default;
+$text-field-unfocused-color: $border-color !default;
 $text-field-color: $border-color;
-$text-field-accent-color: $primary-color !default;
+$text-field-accent-color: $border-color !default;
 $select-border-radius: 8px !default;
-$select-border: 1px solid #757575 !default;
+$select-border: 1px solid $border-color;
 
 // Tooltips
 $tooltip-font-size: 12px !default;

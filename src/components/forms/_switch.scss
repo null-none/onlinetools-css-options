@@ -16,6 +16,9 @@
     &__label {
         display: block;
         padding: 0 0 0 44px;
+        color: $black-color;
+        font-size: 16px;
+        font-weight: $text-field-font-weight;
         cursor: pointer;
 
         &:before {

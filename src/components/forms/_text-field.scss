@@ -4,7 +4,7 @@
   position: relative;
 
   &__input {
-    background: #fff !important;
+    background-color: $card-background-color;
     border-radius: $text-field-border-radius;
     border: 1px solid $text-field-unfocused-color;
     height: $text-field-height;
@@ -24,19 +24,23 @@
     &:focus
       + .text-field__input__placeholder
       .text-field__input__placeholder__label,
-    :not(input[value=""])
+    &:not(input[value=""])
       + .text-field__input__placeholder
       .text-field__input__placeholder__label {
-      background-color: #fff;
+      background-color: $background;
       background-clip: content-box;
-      color: black;
+      color: $black-color;
       transform: translate(0, -85%);
+      font-size: 13px;
+      font-weight: $text-field-font-weight;
     }
     &:focus
       + .text-field__input__placeholder
       .text-field__input__placeholder__label {
-      border-color: $primary-color;
+      border-color: $black-color;
       color: $text-field-placeholder-color;
+      font-size: 13px;
+      font-weight: $text-field-font-weight;
     }
 
     &__placeholder {
@@ -45,7 +49,6 @@
       bottom: 0;
       left: 0;
       right: 0;
-      border: 3px solid transparent;
       background-color: transparent;
       pointer-events: none;
       display: flex;
@@ -55,7 +58,9 @@
         padding: 0 0.5rem;
         background-color: transparent;
         transform: translate(0);
-        color: black;
+        color: #656778;
+        font-size: 16px;
+        font-weight: 300;
         transition:
           transform 0.15s ease-out,
           font-size 0.15s ease-out,
@@ -66,18 +71,21 @@
   }
 
   &__textarea {
-    background: #fff !important;
+    background: $background !important;
     border-radius: $text-field-border-radius;
     border: 1px solid $text-field-unfocused-color;
     height: $text-field-height;
     font-weight: $text-field-font-weight;
-    line-height: $text-field-height;
-    outline: none;
     padding: 0 0.5rem;
     transition: border-bottom $transition-duration ease-in;
+    resize: none;
+    height: 78px;
+    min-width: 350px;
+
 
     &:focus {
       border: 1px solid $text-field-accent-color;
+      outline: none !important;
 
       + label {
         color: $text-field-accent-color;
@@ -89,16 +97,20 @@
     :not(textarea[value=""])
       + .text-field__textarea__placeholder
       .text-field__textarea__placeholder__label {
-      background-color: #fff;
+      background-color: $background;
       background-clip: content-box;
-      color: black;
-      transform: translate(0, -85%);
+      color: $black-color;
+      transform: translate(0, -180%);
+      font-size: 13px;
+      font-weight: $text-field-font-weight;
     }
     &:focus
       + .text-field__textarea__placeholder
       .text-field__textarea__placeholder__label {
-      border-color: $primary-color;
+      border-color: $black-color;
       color: $text-field-placeholder-color;
+      font-size: 13px;
+      font-weight: $text-field-font-weight;
     }
 
     &__placeholder {
@@ -107,7 +119,6 @@
       bottom: 0;
       left: 0;
       right: 0;
-      border: 3px solid transparent;
       background-color: transparent;
       pointer-events: none;
       display: flex;
@@ -117,7 +128,9 @@
         padding: 0 0.5rem;
         background-color: transparent;
         transform: translate(0);
-        color: black;
+        color: #656778;
+        font-size: 16px;
+        font-weight: 300;
         transition:
           transform 0.15s ease-out,
           font-size 0.15s ease-out,
@@ -126,4 +139,9 @@
       }
     }
   }
+}
+
+.text-field.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

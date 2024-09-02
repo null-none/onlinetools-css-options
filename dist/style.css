@@ -2,7 +2,7 @@
 .card {
   background-color: #F3F6FA;
   position: relative;
-  border-radius: 2px;
+  border-radius: 8px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   margin: 0 0 48px;
   padding: 0;
@@ -21,59 +21,37 @@
 
 .text-field {
   position: relative;
-  /*
-  .text {
-    font-size: 1.4rem;
-    padding: 0 0.5rem;
-    background-color: transparent;
-    transform: translate(0);
-    color: black;
-    transition:
-      transform 0.15s ease-out,
-      font-size 0.15s ease-out,
-      background-color 0.2s ease-out,
-      color 0.15s ease-out;
-  }
-  input,
-  .placeholder-text {
-    font-size: 1.4rem;
-    padding: 0 1.2rem;
-  }
-
-  @media (max-width: 40rem) {
-    input {
-      width: 70vw;
-    }
-  }
-  */
 }
 .text-field__input {
-  background: #fff !important;
+  background-color: #F3F6FA;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid #D4D5DE;
   height: 36px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 36px;
   outline: none;
   padding: 0 0.5rem;
   transition: border-bottom 150ms ease-in;
 }
 .text-field__input:focus {
-  border: 1px solid hsl(213, 39%, 52%);
+  border: 1px solid #D4D5DE;
 }
 .text-field__input:focus + label {
-  color: hsl(213, 39%, 52%);
+  color: #D4D5DE;
 }
-.text-field__input:focus + .text-field__input__placeholder .text-field__input__placeholder__label,
-.text-field__input :not(input[value=""]) + .text-field__input__placeholder .text-field__input__placeholder__label {
-  background-color: #fff;
+.text-field__input:focus + .text-field__input__placeholder .text-field__input__placeholder__label, .text-field__input:not(input[value=""]) + .text-field__input__placeholder .text-field__input__placeholder__label {
+  background-color: #F3F6FA;
   background-clip: content-box;
-  color: black;
+  color: #31344B;
   transform: translate(0, -85%);
+  font-size: 13px;
+  font-weight: 500;
 }
 .text-field__input:focus + .text-field__input__placeholder .text-field__input__placeholder__label {
-  border-color: hsl(213, 39%, 52%);
-  color: hsl(213, 39%, 52%);
+  border-color: #31344B;
+  color: #31344B;
+  font-size: 13px;
+  font-weight: 500;
 }
 .text-field__input__placeholder {
   position: absolute;
@@ -81,7 +59,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  border: 3px solid transparent;
   background-color: transparent;
   pointer-events: none;
   display: flex;
@@ -91,36 +68,44 @@
   padding: 0 0.5rem;
   background-color: transparent;
   transform: translate(0);
-  color: black;
+  color: #656778;
+  font-size: 16px;
+  font-weight: 300;
   transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
 }
 .text-field__textarea {
-  background: #fff !important;
+  background: #F3F6FA !important;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid #D4D5DE;
   height: 36px;
-  font-weight: 400;
-  line-height: 36px;
-  outline: none;
+  font-weight: 500;
   padding: 0 0.5rem;
   transition: border-bottom 150ms ease-in;
+  resize: none;
+  height: 78px;
+  min-width: 350px;
 }
 .text-field__textarea:focus {
-  border: 1px solid hsl(213, 39%, 52%);
+  border: 1px solid #D4D5DE;
+  outline: none !important;
 }
 .text-field__textarea:focus + label {
-  color: hsl(213, 39%, 52%);
+  color: #D4D5DE;
 }
 .text-field__textarea:focus + .text-field__textarea__placeholder .text-field__textarea__placeholder__label,
 .text-field__textarea :not(textarea[value=""]) + .text-field__textarea__placeholder .text-field__textarea__placeholder__label {
-  background-color: #fff;
+  background-color: #F3F6FA;
   background-clip: content-box;
-  color: black;
-  transform: translate(0, -85%);
+  color: #31344B;
+  transform: translate(0, -180%);
+  font-size: 13px;
+  font-weight: 500;
 }
 .text-field__textarea:focus + .text-field__textarea__placeholder .text-field__textarea__placeholder__label {
-  border-color: hsl(213, 39%, 52%);
-  color: hsl(213, 39%, 52%);
+  border-color: #31344B;
+  color: #31344B;
+  font-size: 13px;
+  font-weight: 500;
 }
 .text-field__textarea__placeholder {
   position: absolute;
@@ -128,7 +113,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  border: 3px solid transparent;
   background-color: transparent;
   pointer-events: none;
   display: flex;
@@ -138,73 +122,17 @@
   padding: 0 0.5rem;
   background-color: transparent;
   transform: translate(0);
-  color: black;
+  color: #656778;
+  font-size: 16px;
+  font-weight: 300;
   transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
 }
 
-/*
-.text-field {
-    position: relative;
-
-    // One Line Input
-    &__input {
-        background: rgba(0, 0, 0, 0) !important;
-        border: 0;
-        border-bottom: 1px solid $text-field-unfocused-color;
-        height: $text-field-height;
-        width: 100%;
-        font-size: 16px;
-        font-weight: $text-field-font-weight;
-        line-height: $text-field-height;
-        color: $text-field-color;
-        outline: none;
-        margin-top: 12px;
-        padding: 0;
-        transition: border-bottom $transition-duration ease-in;
-
-        &:focus {
-            border-bottom: 1px solid $text-field-accent-color;
-
-            +label {
-                color: $text-field-accent-color;
-            }
-        }
-
-        // Textarea Input
-        &--textarea {
-            font-family: inherit;
-            color: $text-field-placeholder-color;
-            height: 100%;
-
-            &:focus {
-                color: $text-field-color;
-            }
-
-            &.text-field__input--expandable {
-                resize: vertical;
-            }
-        }
-    }
-
-    &__label {
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 12px;
-        color: $text-field-unfocused-color;
-        transition: all $transition-duration ease-in;
-        cursor: text;
-    }
+.text-field.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-// Placeholders
-::placeholder {
-    color: $text-field-placeholder-color;
-    font-weight: 300;
-}
-*/
 .checkbox {
   display: inline-block;
   position: relative;
@@ -223,7 +151,10 @@
 }
 .checkbox__label {
   display: block;
-  padding: 0 0 0 24px;
+  padding: 2px 0 0 24px;
+  color: #31344B;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
 }
 .checkbox__label:before {
@@ -282,8 +213,11 @@
 }
 .radio__label {
   display: block;
-  padding: 0 0 0 24px;
+  padding: 2px 0 0 24px;
   cursor: pointer;
+  color: #31344B;
+  font-size: 16px;
+  font-weight: 500;
 }
 .radio__label:before {
   content: "";
@@ -340,6 +274,9 @@
 .switch__label {
   display: block;
   padding: 0 0 0 44px;
+  color: #31344B;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
 }
 .switch__label:before {
@@ -391,13 +328,12 @@
   padding: 10px 10px 10px 0;
   font-size: 18px;
   border-radius: 8px;
-  border: 1px solid #757575;
+  border: 1px solid #D4D5DE;
 }
 .select__select:after {
   position: absolute;
   top: 18px;
   right: 10px;
-  /* Styling the down arrow */
   width: 0;
   height: 0;
   padding: 0 0.5rem;
@@ -531,12 +467,6 @@
   transform: translate(-8px, 50%);
 }
 
-/**
- * $sm: 576px;
- * $md: 768px;
- * $lg: 992px;
- * $xl: 1200px;
- **/
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -896,4 +826,404 @@
   .cell.\-xl-24of24 {
     width: 100%;
   }
+}
+.supporting-text {
+  font-size: 12px;
+  color: #656778;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.pr-1 {
+  padding-right: 0.25rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.pa-1 {
+  padding-top: 0.25rem;
+  padding-left: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.ma-1 {
+  margin-top: 0.25rem;
+  margin-left: 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.pa-2 {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.ma-2 {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.pa-3 {
+  padding-top: 0.75rem;
+  padding-left: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.ma-3 {
+  margin-top: 0.75rem;
+  margin-left: 0.75rem;
+  margin-bottom: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.pa-4 {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.ma-4 {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
+.pa-5 {
+  padding-top: 1.25rem;
+  padding-left: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.ma-5 {
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
+  margin-bottom: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.pt-auto {
+  padding-top: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.pb-auto {
+  padding-bottom: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.pl-auto {
+  padding-left: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.pr-auto {
+  padding-right: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.pa-auto {
+  padding-top: auto;
+  padding-left: auto;
+  padding-bottom: auto;
+  padding-right: auto;
+}
+
+.ma-auto {
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+}
+
+.px-auto {
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.py-auto {
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }

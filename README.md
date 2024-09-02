@@ -1,8 +1,7 @@
 # CSS Online Options
 
 ## About
-Mini Material is a simple library of Material Design based elements. It uses only CSS, thus it's small and light.
-
+Simple library of Material Design based elements.
 
 ## Usage
 Table of contents:
