@@ -1,39 +1,108 @@
 .select {
+  position: relative;
+  width: 350px;
+
+  &__select {
     position: relative;
+    font-family: inherit;
+    background: #fff !important;
+    width: 350px;
+    padding: 10px 10px 10px 0;
+    font-size: 18px;
+    border-radius: $select-border-radius;
+    border: $select-border;
 
-    &__select {
-        background: rgba(0, 0, 0, 0) !important;
-        border: 0;
-        border-bottom: 1px solid $text-field-unfocused-color;
-        height: $text-field-height;
-        width: auto;
-        font-size: 16px;
-        font-weight: $text-field-font-weight;
-        line-height: $text-field-height;
-        color: $text-field-color;
-        outline: none;
-        margin-top: 12px;
-        padding: 0;
-        transition: border-bottom $transition-duration ease-in;
-
-        &:focus {
-            border-bottom: 1px solid $text-field-accent-color;
-
-            +label {
-                color: $text-field-accent-color;
-            }
-        }
+    &:after {
+      position: absolute;
+      top: 18px;
+      right: 10px;
+      /* Styling the down arrow */
+      width: 0;
+      height: 0;
+      padding: 0 0.5rem;
+      content: "";
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid rgba(0, 0, 0, 0.12);
+      pointer-events: none;
     }
 
-    &__label {
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 12px;
-        color: $text-field-unfocused-color;
-        transition: all $transition-duration ease-in;
-        cursor: text;
+    &:focus ~ .select__label,
+    &:valid ~ .select__label {
+      background: #fff !important;
+      color: $black-color;
+      top: -10px;
+      transition: 0.2s ease all;
+      font-size: 14px;
     }
+  }
+
+  &__text {
+    position: relative;
+    font-family: inherit;
+    background-color: transparent;
+    width: 350px;
+    padding: 10px 10px 10px 0;
+    font-size: 18px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    appearance: none;
+    -webkit-appearance: none;
+
+    &:focus ~ .select__bar:before,
+    &:focus ~ .select__bar:after {
+      width: 50%;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0);
+    }
+  }
+
+  &__label {
+    color: rgba(0, 0, 0, 0.26);
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 10px;
+    transition: 0.2s ease all;
+  }
+
+  &__bar {
+    position: relative;
+    display: block;
+    width: 350px;
+
+    &:before,
+    &:after {
+      content: "";
+      height: 2px;
+      width: 0;
+      bottom: 1px;
+      position: absolute;
+      background: $primary-color;
+      transition: 0.2s ease all;
+    }
+
+    &:before {
+      left: 50%;
+    }
+
+    &:after {
+      right: 50%;
+    }
+  }
+  &__highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
 }

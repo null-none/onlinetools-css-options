@@ -1,21 +1,30 @@
 // Global
 $transition-duration: 150ms !default;
-$primary-color: #3f51b5 !default;
+$primary-color: hsl(213, 39%, 52%) !default;
+$border-color: #757575 !default;
+$black-color: #31344B !default;
+
+// Cards
+$card-background-color: #F3F6FA !default;
+$card-padding: 10px !default;
+$card-margin-bottom: 48px !default;
 
 // Forms
+$text-field-border-radius: 8px !default;
 $text-field-height: 36px !default;
 $text-field-font-weight: 400 !default;
-$text-field-placeholder-color: rgba(0, 0, 0, .2) !default;
+$text-field-placeholder-color: $primary-color !default;
 $text-field-unfocused-color: rgba(0, 0, 0, .5) !default;
-$text-field-color: #757575 !default;
+$text-field-color: $border-color;
 $text-field-accent-color: $primary-color !default;
-
+$select-border-radius: 8px !default;
+$select-border: 1px solid #757575 !default;
 
 // Tooltips
 $tooltip-font-size: 12px !default;
 $tooltip-padding: 8px !default;
 $tooltip-margin: 8px !default;
 
-
 // Grid
 $total-columns: 24 !default;
+

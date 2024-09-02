@@ -1,56 +1,210 @@
 /*! Mini Material | GPL v2.0 | https://github.com/sajran/mini-material */
+.card {
+  background-color: #F3F6FA;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  margin: 0 0 48px;
+  padding: 0;
+  text-align: left;
+}
+.card__title {
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0;
+  padding: 10px 10px 0;
+  text-align: left;
+}
+.card__content {
+  padding: 10px;
+}
+
 .text-field {
   position: relative;
+  /*
+  .text {
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+    background-color: transparent;
+    transform: translate(0);
+    color: black;
+    transition:
+      transform 0.15s ease-out,
+      font-size 0.15s ease-out,
+      background-color 0.2s ease-out,
+      color 0.15s ease-out;
+  }
+  input,
+  .placeholder-text {
+    font-size: 1.4rem;
+    padding: 0 1.2rem;
+  }
+
+  @media (max-width: 40rem) {
+    input {
+      width: 70vw;
+    }
+  }
+  */
 }
 .text-field__input {
-  background: rgba(0, 0, 0, 0) !important;
-  border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  background: #fff !important;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   height: 36px;
-  width: 100%;
-  font-size: 16px;
   font-weight: 400;
   line-height: 36px;
-  color: #757575;
   outline: none;
-  margin-top: 12px;
-  padding: 0;
+  padding: 0 0.5rem;
   transition: border-bottom 150ms ease-in;
 }
 .text-field__input:focus {
-  border-bottom: 1px solid #3f51b5;
+  border: 1px solid hsl(213, 39%, 52%);
 }
 .text-field__input:focus + label {
-  color: #3f51b5;
+  color: hsl(213, 39%, 52%);
 }
-.text-field__input--textarea {
-  font-family: inherit;
-  color: rgba(0, 0, 0, 0.2);
-  height: 100%;
+.text-field__input:focus + .text-field__input__placeholder .text-field__input__placeholder__label,
+.text-field__input :not(input[value=""]) + .text-field__input__placeholder .text-field__input__placeholder__label {
+  background-color: #fff;
+  background-clip: content-box;
+  color: black;
+  transform: translate(0, -85%);
 }
-.text-field__input--textarea:focus {
-  color: #757575;
+.text-field__input:focus + .text-field__input__placeholder .text-field__input__placeholder__label {
+  border-color: hsl(213, 39%, 52%);
+  color: hsl(213, 39%, 52%);
 }
-.text-field__input--textarea.text-field__input--expandable {
-  resize: vertical;
-}
-.text-field__label {
+.text-field__input__placeholder {
   position: absolute;
-  left: 0;
   top: 0;
-  font-size: 12px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 3px solid transparent;
+  background-color: transparent;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+.text-field__input__placeholder__label {
+  padding: 0 0.5rem;
+  background-color: transparent;
+  transform: translate(0);
+  color: black;
+  transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
+}
+.text-field__textarea {
+  background: #fff !important;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 36px;
   font-weight: 400;
-  line-height: 12px;
-  color: rgba(0, 0, 0, 0.5);
-  transition: all 150ms ease-in;
-  cursor: text;
+  line-height: 36px;
+  outline: none;
+  padding: 0 0.5rem;
+  transition: border-bottom 150ms ease-in;
+}
+.text-field__textarea:focus {
+  border: 1px solid hsl(213, 39%, 52%);
+}
+.text-field__textarea:focus + label {
+  color: hsl(213, 39%, 52%);
+}
+.text-field__textarea:focus + .text-field__textarea__placeholder .text-field__textarea__placeholder__label,
+.text-field__textarea :not(textarea[value=""]) + .text-field__textarea__placeholder .text-field__textarea__placeholder__label {
+  background-color: #fff;
+  background-clip: content-box;
+  color: black;
+  transform: translate(0, -85%);
+}
+.text-field__textarea:focus + .text-field__textarea__placeholder .text-field__textarea__placeholder__label {
+  border-color: hsl(213, 39%, 52%);
+  color: hsl(213, 39%, 52%);
+}
+.text-field__textarea__placeholder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 3px solid transparent;
+  background-color: transparent;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+.text-field__textarea__placeholder__label {
+  padding: 0 0.5rem;
+  background-color: transparent;
+  transform: translate(0);
+  color: black;
+  transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
 }
 
+/*
+.text-field {
+    position: relative;
+
+    // One Line Input
+    &__input {
+        background: rgba(0, 0, 0, 0) !important;
+        border: 0;
+        border-bottom: 1px solid $text-field-unfocused-color;
+        height: $text-field-height;
+        width: 100%;
+        font-size: 16px;
+        font-weight: $text-field-font-weight;
+        line-height: $text-field-height;
+        color: $text-field-color;
+        outline: none;
+        margin-top: 12px;
+        padding: 0;
+        transition: border-bottom $transition-duration ease-in;
+
+        &:focus {
+            border-bottom: 1px solid $text-field-accent-color;
+
+            +label {
+                color: $text-field-accent-color;
+            }
+        }
+
+        // Textarea Input
+        &--textarea {
+            font-family: inherit;
+            color: $text-field-placeholder-color;
+            height: 100%;
+
+            &:focus {
+                color: $text-field-color;
+            }
+
+            &.text-field__input--expandable {
+                resize: vertical;
+            }
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
+        color: $text-field-unfocused-color;
+        transition: all $transition-duration ease-in;
+        cursor: text;
+    }
+}
+
+// Placeholders
 ::placeholder {
-  color: rgba(0, 0, 0, 0.2);
-  font-weight: 300;
+    color: $text-field-placeholder-color;
+    font-weight: 300;
 }
-
+*/
 .checkbox {
   display: inline-block;
   position: relative;
@@ -90,8 +244,8 @@
   content: "";
   position: absolute;
   top: 5px;
-  left: 5px;
-  width: 6px;
+  left: 7px;
+  width: 4px;
   height: 12px;
   border-bottom: 2px solid transparent;
   border-right: 2px solid transparent;
@@ -100,8 +254,8 @@
   transition: border-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox__input:checked + .checkbox__label:before {
-  background-color: #3f51b5;
-  border-color: #3f51b5;
+  background-color: hsl(213, 39%, 52%);
+  border-color: hsl(213, 39%, 52%);
 }
 .checkbox__input:checked + .checkbox__label:after {
   border-color: #fff;
@@ -147,18 +301,18 @@
 .radio__label:after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 4px;
+  top: 10px;
+  left: 6px;
   width: 8px;
   height: 8px;
-  background-color: #3f51b5;
+  background-color: hsl(213, 39%, 52%);
   border-radius: 50%;
   z-index: 2;
   transform: scale(0, 0);
   transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .radio__input:checked + .radio__label:before {
-  border-color: #3f51b5;
+  border-color: hsl(213, 39%, 52%);
 }
 .radio__input:checked + .radio__label:after {
   transform: scale(1, 1);
@@ -215,11 +369,11 @@
   transition-property: left, background-color;
 }
 .switch__input:checked + .switch__label:before {
-  background-color: rgba(63, 81, 181, 0.5);
+  background-color: rgba(85, 128, 180, 0.5);
 }
 .switch__input:checked + .switch__label:after {
   left: 16px;
-  background-color: #3f51b5;
+  background-color: hsl(213, 39%, 52%);
 }
 .switch__input:focus + .switch__label:after {
   outline: 1px dotted currentColor;
@@ -227,38 +381,97 @@
 
 .select {
   position: relative;
+  width: 350px;
 }
 .select__select {
-  background: rgba(0, 0, 0, 0) !important;
-  border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  height: 36px;
-  width: auto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 36px;
-  color: #757575;
+  position: relative;
+  font-family: inherit;
+  background: #fff !important;
+  width: 350px;
+  padding: 10px 10px 10px 0;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #757575;
+}
+.select__select:after {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  /* Styling the down arrow */
+  width: 0;
+  height: 0;
+  padding: 0 0.5rem;
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+.select__select:focus ~ .select__label, .select__select:valid ~ .select__label {
+  background: #fff !important;
+  color: #31344B;
+  top: -10px;
+  transition: 0.2s ease all;
+  font-size: 14px;
+}
+.select__text {
+  position: relative;
+  font-family: inherit;
+  background-color: transparent;
+  width: 350px;
+  padding: 10px 10px 10px 0;
+  font-size: 18px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  appearance: none;
+  -webkit-appearance: none;
+}
+.select__text:focus ~ .select__bar:before, .select__text:focus ~ .select__bar:after {
+  width: 50%;
+}
+.select__text:focus {
   outline: none;
-  margin-top: 12px;
-  padding: 0;
-  transition: border-bottom 150ms ease-in;
-}
-.select__select:focus {
-  border-bottom: 1px solid #3f51b5;
-}
-.select__select:focus + label {
-  color: #3f51b5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 .select__label {
+  color: rgba(0, 0, 0, 0.26);
+  font-size: 18px;
+  font-weight: normal;
   position: absolute;
+  pointer-events: none;
   left: 0;
-  top: 0;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 12px;
-  color: rgba(0, 0, 0, 0.5);
-  transition: all 150ms ease-in;
-  cursor: text;
+  top: 10px;
+  transition: 0.2s ease all;
+}
+.select__bar {
+  position: relative;
+  display: block;
+  width: 350px;
+}
+.select__bar:before, .select__bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: hsl(213, 39%, 52%);
+  transition: 0.2s ease all;
+}
+.select__bar:before {
+  left: 50%;
+}
+.select__bar:after {
+  right: 50%;
+}
+.select__highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 [data-tooltip] {

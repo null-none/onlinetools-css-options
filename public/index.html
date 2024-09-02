@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/style.css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:500,300,300italic,400&amp;subset=latin,latin-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      html {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.4em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="cell -xl-6of24"></div>
+      <div class="cell -xl-12of24">
+        <article class="card color--white text--black">
+          <h3 class="card__title" id="forms">Forms</h3>
+          <div class="card__content">
+            <h4>Text fields</h4>
+
+            <div class="text-field">
+              <input
+                type="text"
+                id="input"
+                name="input"
+                autocomplete="off"
+                class="text-field__input"
+                value=""
+                aria-labelledby="placeholder-input"
+              />
+              <label
+                class="text-field__input__placeholder"
+                for="input"
+                id="placeholder-fname"
+              >
+                <div class="text-field__input__placeholder__label">Input</div>
+              </label>
+            </div>
+            <h4>Textarea</h4>
+            <div class="text-field">
+              <textarea
+                id="textarea"
+                name="textarea"
+                autocomplete="off"
+                class="text-field__textarea"
+                value=""
+                aria-labelledby="placeholder-textarea"
+              >
+              </textarea>
+              <label
+                class="text-field__textarea__placeholder"
+                for="fname"
+                id="placeholder-textarea"
+              >
+                <div class="text-field__textarea__placeholder__label">
+                  Textarea
+                </div>
+              </label>
+            </div>
+
+            <div>
+              <div>
+                <h4>Checkboxes</h4>
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="checkbox1"
+                    class="checkbox__input"
+                    checked=""
+                  />
+                  <label for="checkbox1" class="checkbox__label"
+                    >Checkbox 1</label
+                  >
+                </div>
+                <br />
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="checkbox2"
+                    class="checkbox__input"
+                  />
+                  <label for="checkbox2" class="checkbox__label"
+                    >Checkbox 2</label
+                  >
+                </div>
+                <br />
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    id="checkbox3"
+                    class="checkbox__input"
+                  />
+                  <label for="checkbox3" class="checkbox__label"
+                    >Checkbox 3</label
+                  >
+                </div>
+                <br />
+              </div>
+              <div>
+                <h4>Radio buttons</h4>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="radio"
+                    id="radio1"
+                    class="radio__input"
+                    checked=""
+                  />
+                  <label for="radio1" class="radio__label">Radio 1</label>
+                </div>
+                <br />
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="radio"
+                    id="radio2"
+                    class="radio__input"
+                  />
+                  <label for="radio2" class="radio__label">Radio 2</label>
+                </div>
+                <br />
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="radio"
+                    id="radio3"
+                    class="radio__input"
+                  />
+                  <label for="radio3" class="radio__label">Radio 3</label>
+                </div>
+                <br />
+              </div>
+              <div>
+                <h4>Switches</h4>
+                <div class="switch">
+                  <input
+                    type="checkbox"
+                    id="switch1"
+                    class="switch__input"
+                    checked=""
+                  />
+                  <label for="switch1" class="switch__label">Switch 1</label>
+                </div>
+                <br />
+                <div class="switch">
+                  <input type="checkbox" id="switch2" class="switch__input" />
+                  <label for="switch2" class="switch__label">Switch 2</label>
+                </div>
+                <br />
+                <div class="switch">
+                  <input type="checkbox" id="switch3" class="switch__input" />
+                  <label for="switch3" class="switch__label">Switch 3</label>
+                </div>
+                <br />
+              </div>
+            </div>
+            <div>
+              <h4>Select</h4>
+              <div class="select">
+                <select class="select__select" required>
+                  <option value="" disabled selected></option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <span class="select__highlight"></span>
+                <span class="select__bar"></span>
+                <label class="select__label">Select</label>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="cell -xl-6of24"></div>
+  </body>
+</html>

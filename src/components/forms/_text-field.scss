@@ -1,4 +1,161 @@
 // Text Fields
+
+.text-field {
+    position: relative;
+  
+    &__input {
+      background: #fff !important;
+      border-radius: $text-field-border-radius;
+      border: 1px solid $text-field-unfocused-color;
+      height: $text-field-height;
+      font-weight: $text-field-font-weight;
+      line-height: $text-field-height;
+      outline: none;
+      padding: 0 0.5rem;
+      transition: border-bottom $transition-duration ease-in;
+  
+      &:focus {
+        border: 1px solid $text-field-accent-color;
+  
+        + label {
+          color: $text-field-accent-color;
+        }
+      }
+      &:focus
+        + .text-field__input__placeholder
+        .text-field__input__placeholder__label,
+      :not(input[value=""])
+        + .text-field__input__placeholder
+        .text-field__input__placeholder__label {
+        background-color: #fff;
+        background-clip: content-box;
+        color: black;
+        transform: translate(0, -85%);
+      }
+      &:focus
+        + .text-field__input__placeholder
+        .text-field__input__placeholder__label {
+        border-color: $primary-color;
+        color: $text-field-placeholder-color;
+      }
+  
+      &__placeholder {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: 3px solid transparent;
+        background-color: transparent;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+  
+        &__label {
+          padding: 0 0.5rem;
+          background-color: transparent;
+          transform: translate(0);
+          color: black;
+          transition:
+            transform 0.15s ease-out,
+            font-size 0.15s ease-out,
+            background-color 0.2s ease-out,
+            color 0.15s ease-out;
+        }
+      }
+    }
+  
+    &__textarea {
+      background: #fff !important;
+      border-radius: $text-field-border-radius;
+      border: 1px solid $text-field-unfocused-color;
+      height: $text-field-height;
+      font-weight: $text-field-font-weight;
+      line-height: $text-field-height;
+      outline: none;
+      padding: 0 0.5rem;
+      transition: border-bottom $transition-duration ease-in;
+
+      &:focus {
+        border: 1px solid $text-field-accent-color;
+  
+        + label {
+          color: $text-field-accent-color;
+        }
+      }
+      &:focus
+        + .text-field__textarea__placeholder
+        .text-field__textarea__placeholder__label,
+      :not(textarea[value=""])
+        + .text-field__textarea__placeholder
+        .text-field__textarea__placeholder__label {
+        background-color: #fff;
+        background-clip: content-box;
+        color: black;
+        transform: translate(0, -85%);
+      }
+      &:focus
+        + .text-field__textarea__placeholder
+        .text-field__textarea__placeholder__label {
+        border-color: $primary-color;
+        color: $text-field-placeholder-color;
+      }
+  
+      &__placeholder {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: 3px solid transparent;
+        background-color: transparent;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+  
+        &__label {
+          padding: 0 0.5rem;
+          background-color: transparent;
+          transform: translate(0);
+          color: black;
+          transition:
+            transform 0.15s ease-out,
+            font-size 0.15s ease-out,
+            background-color 0.2s ease-out,
+            color 0.15s ease-out;
+        }
+      } 
+  }
+  
+
+  /*
+  .text {
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+    background-color: transparent;
+    transform: translate(0);
+    color: black;
+    transition:
+      transform 0.15s ease-out,
+      font-size 0.15s ease-out,
+      background-color 0.2s ease-out,
+      color 0.15s ease-out;
+  }
+  input,
+  .placeholder-text {
+    font-size: 1.4rem;
+    padding: 0 1.2rem;
+  }
+
+  @media (max-width: 40rem) {
+    input {
+      width: 70vw;
+    }
+  }
+  */
+}
+
+/*
 .text-field {
     position: relative;
 
@@ -60,3 +217,4 @@
     color: $text-field-placeholder-color;
     font-weight: 300;
 }
+*/
