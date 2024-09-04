@@ -70,6 +70,80 @@
     }
   }
 
+  &__color {
+    background-color: $card-background-color;
+    border-radius: $text-field-border-radius;
+    border: 1px solid $text-field-unfocused-color;
+    height: $text-field-height;
+    font-weight: $text-field-font-weight;
+    line-height: $text-field-height;
+    outline: none;
+    padding: 0 0.5rem;
+    transition: border-bottom $transition-duration ease-in;
+
+    &:focus {
+      border: 1px solid $text-field-accent-color;
+
+      + label {
+        color: $text-field-accent-color;
+      }
+    }
+    &:focus
+      + .text-field__color__placeholder
+      .text-field__color__placeholder__label,
+    &:not(:placeholder-shown)
+      + .text-field__color__placeholder
+      .text-field__color__placeholder__label {
+      background-color: $background;
+      background-clip: content-box;
+      color: $black-color;
+      transform: translate(0, -85%);
+      font-size: 13px;
+      font-weight: $text-field-font-weight;
+    }
+    &:focus
+      + .text-field__color__placeholder
+      .text-field__color__placeholder__label {
+      border-color: $black-color;
+      color: $text-field-placeholder-color;
+      font-size: 13px;
+      font-weight: $text-field-font-weight;
+    }
+
+    &__picker {
+      color: $primary-color;
+      margin-left: -28px;
+      margin-top: 6px;
+      cursor: pointer;
+    }
+
+    &__placeholder {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+
+      &__label {
+        padding: 0 0.5rem;
+        background-color: transparent;
+        transform: translate(0);
+        color: #656778;
+        font-size: 16px;
+        font-weight: 300;
+        transition:
+          transform 0.15s ease-out,
+          font-size 0.15s ease-out,
+          background-color 0.2s ease-out,
+          color 0.15s ease-out;
+      }
+    }
+  }
+
   &__textarea {
     background: $background !important;
     border-radius: $text-field-border-radius;
@@ -139,9 +213,4 @@
       }
     }
   }
-}
-
-.text-field.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }

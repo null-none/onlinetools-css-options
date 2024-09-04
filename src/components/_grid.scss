@@ -10,13 +10,6 @@
   flex-shrink: 0;
 }
 
-$breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-);
-
 .grid {
   @include GRID;
 }
@@ -60,18 +53,9 @@ $breakpoints: (
 .cell {
   @include CELL;
 }
+
 .cell.\-fill {
   width: 0;
   min-width: 0;
   flex-grow: 1;
-}
-
-@each $size, $value in $breakpoints {
-  @media (min-width: $value) {
-    @for $index from 1 through $total-columns {
-      .cell.\-#{$size}-#{$index}of#{$total-columns} {
-        width: percentage(math.div($index, $total-columns));
-      }
-    }
-  }
 }

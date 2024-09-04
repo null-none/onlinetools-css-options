@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Design Systen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../dist/style.css" />
     <link
       href="http://fonts.googleapis.com/css?family=Roboto:500,300,300italic,400&amp;subset=latin,latin-ext"
       rel="stylesheet"
@@ -21,12 +21,12 @@
     </style>
   </head>
   <body>
-    <div class="grid">
-      <div class="cell -xl-6of24"></div>
-      <div class="cell -xl-12of24">
+    <div class="grid -between">
+      <div class="cell"></div>
+      <div class="cell">
         <article class="card color--white text--black">
           <div class="card__content">
-            <div class="pb-5">
+            <div class="pb-1">
               <div class="text-field">
                 <input
                   type="text"
@@ -41,7 +41,7 @@
                 <label
                   class="text-field__input__placeholder"
                   for="input"
-                  id="placeholder-fname"
+                  id="placeholder-input"
                 >
                   <div class="text-field__input__placeholder__label">
                     Image width, px
@@ -53,7 +53,58 @@
                 possible</span
               >
             </div>
-            <div class="pb-5">
+            <div class="pb-1">
+              <div class="text-field">
+                <input
+                  type="number"
+                  id="number"
+                  name="number"
+                  autocomplete="off"
+                  placeholder=""
+                  class="text-field__input"
+                  value="26"
+                  aria-labelledby="placeholder-number"
+                />
+                <label
+                  class="text-field__input__placeholder"
+                  for="number"
+                  id="placeholder-input"
+                >
+                  <div class="text-field__input__placeholder__label">
+                    Precent
+                  </div>
+                </label>
+              </div>
+              <span class="supporting-text">Match similar color tones.</span>
+            </div>
+            <div class="pb-1">
+              <div class="text-field">
+                <input
+                  type="text"
+                  id="color"
+                  name="color"
+                  autocomplete="off"
+                  placeholder=""
+                  class="text-field__color"
+                  value="#5581b5"
+                  aria-labelledby="placeholder-color"
+                />
+                <label
+                  class="text-field__color__placeholder"
+                  for="input"
+                  id="placeholder-color"
+                >
+                  <div class="text-field__color__placeholder__label">
+                    Color, hex
+                  </div>
+                </label>
+                <span class="text-field__color__picker">&#9632;</span>
+              </div>
+              <span class="supporting-text"
+                >Enter color to make transparent.</span
+              >
+            </div>
+            <div class="pb-1">
               <div class="text-field">
                 <textarea
                   id="textarea"
@@ -75,7 +126,7 @@
               </div>
               <span class="supporting-text">One word or phrase per line</span>
             </div>
-            <div class="pb-5">
+            <div class="pb-1">
               <div>
                 <div class="checkbox">
                   <input
@@ -110,7 +161,7 @@
                 </div>
               </div>
             </div>
-            <div class="pb-5">
+            <div class="pb-1">
               <div>
                 <div class="switch">
                   <input
@@ -145,7 +196,7 @@
                 </div>
               </div>
             </div>
-            <div class="pb-5">
+            <div class="pb-1">
               <div>
                 <div class="radio">
                   <input
@@ -200,7 +251,7 @@
                 </div>
               </div>
             </div>
-            <div class="pb-5">
+            <div class="pb-1">
               <div>
                 <div class="select">
                   <select class="select__select" required>
@@ -216,8 +267,138 @@
                 </div>
               </div>
             </div>
-
-            <div class="pb-5">
+            <div class="pb-1">
+              <div class="grid">
+                <div class="cell">
+                  <div class="text-field">
+                    <input
+                      type="number"
+                      id="number"
+                      name="number"
+                      autocomplete="off"
+                      placeholder=""
+                      class="text-field__input"
+                      value=""
+                      aria-labelledby="placeholder-number"
+                    />
+                    <label
+                      class="text-field__input__placeholder"
+                      for="number"
+                      id="placeholder-input"
+                    >
+                      <div class="text-field__input__placeholder__label">
+                        Left position
+                      </div>
+                    </label>
+                  </div>
+                  <span class="supporting-text">X position of text box.</span>
+                </div>
+                <div class="cell">
+                  <div class="text-field">
+                    <input
+                      type="number"
+                      id="number"
+                      name="number"
+                      autocomplete="off"
+                      placeholder=""
+                      class="text-field__input"
+                      value=""
+                      aria-labelledby="placeholder-number"
+                    />
+                    <label
+                      class="text-field__input__placeholder"
+                      for="number"
+                      id="placeholder-input"
+                    >
+                      <div class="text-field__input__placeholder__label">
+                        Right position
+                      </div>
+                    </label>
+                  </div>
+                  <span class="supporting-text">Y position of text box.</span>
+                </div>
+              </div>
+            </div>
+            <div class="pb-1">
+              <div class="grid">
+                <div class="cell">
+                  <div class="text-field">
+                    <input
+                      type="number"
+                      id="number"
+                      name="number"
+                      autocomplete="off"
+                      placeholder=""
+                      class="text-field__input"
+                      value="0.3"
+                      step="0.1"
+                      aria-labelledby="placeholder-number"
+                    />
+                    <label
+                      class="text-field__input__placeholder"
+                      for="number"
+                      id="placeholder-input"
+                    >
+                      <div class="text-field__input__placeholder__label">
+                        Red
+                      </div>
+                    </label>
+                  </div>
+                  <span class="supporting-text">Red.</span>
+                </div>
+                <div class="cell">
+                  <div class="text-field">
+                    <input
+                      type="number"
+                      id="number"
+                      name="number"
+                      autocomplete="off"
+                      placeholder=""
+                      class="text-field__input"
+                      value="0.5"
+                      step="0.1"
+                      aria-labelledby="placeholder-number"
+                    />
+                    <label
+                      class="text-field__input__placeholder"
+                      for="number"
+                      id="placeholder-input"
+                    >
+                      <div class="text-field__input__placeholder__label">
+                        Green
+                      </div>
+                    </label>
+                  </div>
+                  <span class="supporting-text">Green.</span>
+                </div>
+                <div class="cell">
+                  <div class="text-field">
+                    <input
+                      type="number"
+                      id="number"
+                      name="number"
+                      autocomplete="off"
+                      placeholder=""
+                      class="text-field__input"
+                      value="0.6"
+                      step="0.1"
+                      aria-labelledby="placeholder-number"
+                    />
+                    <label
+                      class="text-field__input__placeholder"
+                      for="number"
+                      id="placeholder-input"
+                    >
+                      <div class="text-field__input__placeholder__label">
+                        Blue
+                      </div>
+                    </label>
+                  </div>
+                  <span class="supporting-text">Blue.</span>
+                </div>
+              </div>
+            </div>
+            <div class="pb-1">
               <div>
                 <span class="tooltip--top" data-tooltip="I'm at the top!"
                   >tooltip top</span
@@ -242,7 +423,7 @@
           </div>
         </article>
       </div>
-      <div class="cell -xl-6of24"></div>
+      <div class="cell"></div>
     </div>
   </body>
 </html>
