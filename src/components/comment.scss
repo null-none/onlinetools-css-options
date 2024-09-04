@@ -1,0 +1,17 @@
+.comment {
+    width: 350px;
+    border-radius: $comment-border-radius;
+    border: $comment-border;
+
+    &__legend {
+        svg {
+            fill: $black-color;
+            margin-bottom: -3px;
+        }
+    }
+
+    &__text {
+        font-size: $comment-font-size;
+        color: $black-color;
+    }
+}

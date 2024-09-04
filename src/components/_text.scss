@@ -1,4 +1,17 @@
-.supporting-text {
-    font-size: 12px;
-    color: #656778;
+.supporting {
+  &__text {
+    font-size: $supporting-text-size;
+    color: $supporting-text-color;
+  }
+}
+
+.option-group {
+  &__heading {
+    color: #31344b;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  &__text {
+    color: $black-color;
+  }
 }

@@ -26,7 +26,37 @@
       <div class="cell">
         <article class="card color--white text--black">
           <div class="card__content">
-            <div class="pb-1">
+            <div class="pb-2">
+              <fieldset class="comment">
+                <legend class="comment__legend">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-info-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                    />
+                    <path
+                      d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                    />
+                  </svg>
+                </legend>
+                <div class="comment__text">
+                  This is a long paragraph written to show how the line-height
+                  of an element is affected by our utilities.
+                </div>
+              </fieldset>
+            </div>
+            <div class="pb-2">
+              <div class="option-group__heading">Text heading</div>
+              <b class="option-group__text">Text bold</b>
+              <div class="option-group__text">Text normal</div>
+            </div>
+            <div class="pb-2">
               <div class="text-field">
                 <input
                   type="text"
@@ -48,12 +78,12 @@
                   </div>
                 </label>
               </div>
-              <span class="supporting-text"
+              <span class="supporting__text"
                 >Leave blanks to fit the entire text in the image as tightly as
                 possible</span
               >
             </div>
-            <div class="pb-1">
+            <div class="pb-2">
               <div class="text-field">
                 <input
                   type="number"
@@ -62,7 +92,7 @@
                   autocomplete="off"
                   placeholder=""
                   class="text-field__input"
-                  value="26"
+                  value=""
                   aria-labelledby="placeholder-number"
                 />
                 <label
@@ -75,9 +105,9 @@
                   </div>
                 </label>
               </div>
-              <span class="supporting-text">Match similar color tones.</span>
+              <span class="supporting__text">Match similar color tones.</span>
             </div>
-            <div class="pb-1">
+            <div class="pb-2">
               <div class="text-field">
                 <input
                   type="text"
@@ -100,11 +130,11 @@
                 </label>
                 <span class="text-field__color__picker">&#9632;</span>
               </div>
-              <span class="supporting-text"
+              <span class="supporting__text"
                 >Enter color to make transparent.</span
               >
             </div>
-            <div class="pb-1">
+            <div class="pb-2">
               <div class="text-field">
                 <textarea
                   id="textarea"
@@ -124,9 +154,9 @@
                   </div>
                 </label>
               </div>
-              <span class="supporting-text">One word or phrase per line</span>
+              <span class="supporting__text">One word or phrase per line</span>
             </div>
-            <div class="pb-1">
+            <div class="pb-2">
               <div>
                 <div class="checkbox">
                   <input
@@ -138,7 +168,7 @@
                   <label for="checkbox1" class="checkbox__label"
                     >Case Sensitive Words</label
                   >
-                  <div class="supporting-text">
+                  <div class="supporting__text">
                     Match words of specific case
                   </div>
                 </div>
@@ -154,14 +184,14 @@
                   <label for="checkbox2" class="checkbox__label"
                     >Transparency Properties</label
                   >
-                  <div class="supporting-text">
+                  <div class="supporting__text">
                     Create a grayscale GIF via a custom formula. (Custom weights
                     are disabled)
                   </div>
                 </div>
               </div>
             </div>
-            <div class="pb-1">
+            <div class="pb-2">
               <div>
                 <div class="switch">
                   <input
@@ -173,7 +203,7 @@
                   <label for="switch1" class="switch__label"
                     >Case Sensitive Words</label
                   >
-                  <div class="supporting-text">
+                  <div class="supporting__text">
                     Match words of specific case
                   </div>
                 </div>
@@ -189,14 +219,14 @@
                   <label for="switch2" class="switch__label"
                     >Transparency Properties</label
                   >
-                  <div class="supporting-text">
+                  <div class="supporting__text">
                     Create a grayscale GIF via a custom formula. (Custom weights
                     are disabled)
                   </div>
                 </div>
               </div>
             </div>
-            <div class="pb-1">
+            <div class="pb-2">
               <div>
                 <div class="radio">
                   <input
@@ -209,7 +239,7 @@
                   <label for="radio1" class="radio__label"
                     >Horizontal Orientation</label
                   >
-                  <div class="supporting-text">
+                  <div class="supporting__text">
                     Make a landscape JPG by adding pixels to the left and right
                     sides.
                   </div>
@@ -227,7 +257,7 @@
                   <label for="radio2" class="radio__label"
                     >Vertical Orientation</label
                   >
-                  <div class="supporting-text">
+                  <div class="supporting__text">
                     Make a portrait JPG by adding pixels to the top and bottom
                     sides.
                   </div>
@@ -245,13 +275,13 @@
                   <label for="radio3" class="radio__label"
                     >Custom Orientation</label
                   >
-                  <div class="supporting-text">
+                  <div class="supporting__text">
                     Set custom size and orientation for a JPG.
                   </div>
                 </div>
               </div>
             </div>
-            <div class="pb-1">
+            <div class="pb-2">
               <div>
                 <div class="select">
                   <select class="select__select" required>
@@ -262,12 +292,12 @@
                   </select>
                   <label class="select__label">Select the text font</label>
                 </div>
-                <div class="supporting-text">
+                <div class="supporting__text">
                   Switch to a custom font (above and specify the font URL here)
                 </div>
               </div>
             </div>
-            <div class="pb-1">
+            <div class="pb-2">
               <div class="grid">
                 <div class="cell">
                   <div class="text-field">
@@ -291,7 +321,7 @@
                       </div>
                     </label>
                   </div>
-                  <span class="supporting-text">X position of text box.</span>
+                  <span class="supporting__text">X position of text box.</span>
                 </div>
                 <div class="cell">
                   <div class="text-field">
@@ -315,11 +345,11 @@
                       </div>
                     </label>
                   </div>
-                  <span class="supporting-text">Y position of text box.</span>
+                  <span class="supporting__text">Y position of text box.</span>
                 </div>
               </div>
             </div>
-            <div class="pb-1">
+            <div class="pb-2">
               <div class="grid">
                 <div class="cell">
                   <div class="text-field">
@@ -344,7 +374,7 @@
                       </div>
                     </label>
                   </div>
-                  <span class="supporting-text">Red.</span>
+                  <span class="supporting__text">Red.</span>
                 </div>
                 <div class="cell">
                   <div class="text-field">
@@ -369,7 +399,7 @@
                       </div>
                     </label>
                   </div>
-                  <span class="supporting-text">Green.</span>
+                  <span class="supporting__text">Green.</span>
                 </div>
                 <div class="cell">
                   <div class="text-field">
@@ -394,11 +424,11 @@
                       </div>
                     </label>
                   </div>
-                  <span class="supporting-text">Blue.</span>
+                  <span class="supporting__text">Blue.</span>
                 </div>
               </div>
             </div>
-            <div class="pb-1">
+            <div class="pb-2">
               <div>
                 <span class="tooltip--top" data-tooltip="I'm at the top!"
                   >tooltip top</span

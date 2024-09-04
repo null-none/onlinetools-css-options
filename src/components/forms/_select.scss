@@ -5,25 +5,15 @@
   &__select {
     position: relative;
     background: $background;
-    width: 350px;
+    width: 200px;
     padding: 10px;
     font-size: 16px;
     font-weight: 300;
     border-radius: $select-border-radius;
     border: $select-border;
 
-    &:after {
-      position: absolute;
-      top: 18px;
-      right: 10px;
-      width: 0;
-      height: 0;
-      padding: 0 0.5rem;
-      content: "";
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-top: 6px solid rgba(0, 0, 0, 0.12);
-      pointer-events: none;
+    &:focus {
+      border: 1px solid $text-field-accent-color;
     }
 
     &:focus ~ .select__label,
