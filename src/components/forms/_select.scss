@@ -1,43 +1,25 @@
 .select {
   position: relative;
-  width: 350px;
 
   &__select {
     position: relative;
     background: $background;
-    width: 200px;
     padding: 10px;
     font-size: 16px;
     font-weight: 300;
     border-radius: $select-border-radius;
     border: $select-border;
-
-    &:focus {
-      border: 1px solid $text-field-accent-color;
-    }
-
-    &:focus ~ .select__label,
-    &:valid ~ .select__label {
-      background-color: $background;
-      background-clip: content-box;
-      color: $black-color;
-      font-size: 13px;
-      font-weight: $text-field-font-weight;
-      top: -10px;
-      left: -5px;
-      transition: 0.2s ease all;
-    }
   }
   
   &__label {
-    padding: 0 1rem;
-    color: #656778;
-    font-size: 16px;
-    font-weight: 300;
-    position: absolute;
-    pointer-events: none;
-    left: -5px;
-    top: 10px;
+    background-color: $background;
+    background-clip: content-box;
+    color: $black-color;
+    font-size: 13px;
+    font-weight: $text-field-font-weight;
+    top: -8px;
+    left: 8px;
     transition: 0.2s ease all;
+    position: absolute;
   }
 }
