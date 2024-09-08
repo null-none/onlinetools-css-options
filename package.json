@@ -6,7 +6,7 @@
   "type": "module",
   "version": "0.1.0",
   "scripts": {
-    "build": "sass src/material.scss > dist/style.css"
+    "build": "sass src/material.scss > dist/options.css"
   },
   "keywords": [
     "css",

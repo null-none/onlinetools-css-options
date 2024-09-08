@@ -16,7 +16,7 @@
     }
     &__label {
         display: block;
-        padding: 2px 0 0 24px;
+        padding: 0px 0 0 24px;
         cursor: pointer;
         color: $black-color;
         font-size: 16px;
@@ -38,8 +38,8 @@
         &:after {
             content: '';
             position: absolute;
-            top: 10px;
-            left: 6px;
+            top: 8px;
+            left: 4px;
             width: 8px;
             height: 8px;
             background-color: $primary-color;
