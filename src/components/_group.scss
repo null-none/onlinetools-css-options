@@ -1,0 +1,47 @@
+.option-group {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 240px; 
+    margin-right: 15px;
+}
+.option-row {
+    display: block;
+    position: relative;
+    margin: 0 0 10px 0;
+}
+
+.examples .option-group b {
+    font-size: 18px;
+    display: inline-block;
+    padding-top: 5px;
+}
+.examples .option-group {
+    display: block;
+    margin: 10px 0 0 0;
+    border-top: 1px rgba(255, 255, 255, 0.2) dotted;
+}
+.examples .option-row {
+    margin: 5px 0 0 0;
+}
+
+.option-row.compact-2 input[type="text"],
+.option-row.compact-2 .text__supporting {
+    width: 85px;
+}
+
+.option-row.compact-2:not(:last-child) {
+    margin-right: 5px;
+}
+
+.option-row.compact-3 input[type="text"],
+.option-row.compact-3 .text__supporting {
+    width: 55px;
+}
+
+.option-row.compact-3:not(:last-child) {
+    margin-right: 5px;
+}
+
+.option-row.is-compact {
+    display: inline-block;
+}

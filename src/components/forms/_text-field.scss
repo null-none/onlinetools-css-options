@@ -30,7 +30,7 @@
       background-color: $background;
       background-clip: content-box;
       color: $black-color;
-      transform: translate(0, -85%);
+      transform: translate(0, -17px);
       font-size: 13px;
       font-weight: $text-field-font-weight;
     }
@@ -97,7 +97,7 @@
       background-color: $background;
       background-clip: content-box;
       color: $black-color;
-      transform: translate(0, -130%);
+      transform: translate(0, -16px);
       font-size: 13px;
       font-weight: $text-field-font-weight;
     }
@@ -111,9 +111,10 @@
     }
 
     &__picker {
-      color: $primary-color;
-      margin-left: -28px;
-      margin-top: 6px;
+      font-size: 50px;
+      position: relative;
+      top: 6px;
+      right: 35px;
       cursor: pointer;
     }
 
@@ -135,6 +136,7 @@
         color: #656778;
         font-size: 16px;
         font-weight: 300;
+        margin-top: 20px;
         transition:
           transform 0.15s ease-out,
           font-size 0.15s ease-out,
@@ -156,7 +158,6 @@
     height: 78px;
     min-width: 350px;
 
-
     &:focus {
       border: 1px solid $text-field-accent-color;
       outline: none !important;
@@ -174,7 +175,7 @@
       background-color: $background;
       background-clip: content-box;
       color: $black-color;
-      transform: translate(0, -15px);
+      transform: translate(0, -17px);
       font-size: 13px;
       font-weight: $text-field-font-weight;
     }

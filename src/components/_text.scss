@@ -1,7 +1,13 @@
 .supporting {
   &__text {
+    opacity: $supporting-opacity;
+    padding-top: 3px;
+    display: inline-block;
+    vertical-align: top;
+    white-space: pre-line;
     font-size: $supporting-text-size;
-    color: $supporting-text-color;
+    position: relative;
+    line-height: 18px;
   }
 }
 
