@@ -80,7 +80,6 @@
     outline: none;
     width: 150px;
     padding: 0 0.5rem;
-    margin-left: 30px;
     transition: border-bottom $transition-duration ease-in;
 
     &:focus {
@@ -118,16 +117,16 @@
       width: 24px;
       background: black;
       content: "";
+      left: 120px;
       position: absolute;
       top: 6px;
-      left: 0px;
     }
 
     &__placeholder {
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 30px;
+      left: 0px;
       right: 0;
       background-color: transparent;
       pointer-events: none;
@@ -141,7 +140,7 @@
         color: #656778;
         font-size: 16px;
         font-weight: 300;
-        left: 30px;
+        left: 0px;
         transition:
           transform 0.15s ease-out,
           font-size 0.15s ease-out,
