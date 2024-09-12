@@ -13,6 +13,7 @@
     outline: none;
     padding: 0 0.5rem;
     transition: border-bottom $transition-duration ease-in;
+    width: 175px;
 
     &:focus {
       border: 1px solid $text-field-accent-color;
@@ -78,7 +79,7 @@
     font-weight: $text-field-font-weight;
     line-height: $text-field-height;
     outline: none;
-    width: 150px;
+    width: 175px;
     padding: 0 0.5rem;
     transition: border-bottom $transition-duration ease-in;
 
@@ -117,7 +118,7 @@
       width: 24px;
       background: black;
       content: "";
-      left: 155px;
+      left: 145px;
       position: absolute;
       top: 6px;
     }
@@ -159,6 +160,7 @@
     padding: 10px;
     transition: border-bottom $transition-duration ease-in;
     resize: none;
+    width: 175px;
 
     &:focus {
       border: 1px solid $text-field-accent-color;

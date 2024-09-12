@@ -3,7 +3,7 @@ $transition-duration: 150ms !default;
 $primary-color: hsl(213, 39%, 52%) !default;
 $border-color: #9e9e9e !default;
 $black-color: #000 !default;
-$background: #eaf0fa !default;
+$background: #fff !default;
 
 // Cards
 $card-background-color: $background;
@@ -30,8 +30,8 @@ $tooltip-margin: 8px !default;
 $total-columns: 24 !default;
 
 // Comment
-$supporting-text-size: 14px !default;
-$supporting-opacity: 0.8;
+$text-supporting-size: 14px !default;
+$text-supporting-opacity: 0.9;
 
 // Comment
 $comment-border-radius: 8px !default;
