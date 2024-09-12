@@ -22,7 +22,7 @@
   background-color: #eaf0fa;
   background-clip: content-box;
   color: #000;
-  transform: translate(0, -17px);
+  transform: translate(0, -18px);
   font-size: 13px;
   font-weight: 400;
 }
@@ -48,7 +48,7 @@
   background-color: transparent;
   transform: translate(0);
   color: #656778;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
 }
@@ -90,7 +90,7 @@
   width: 24px;
   background: black;
   content: "";
-  left: 120px;
+  left: 155px;
   position: absolute;
   top: 6px;
 }
@@ -98,7 +98,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0px;
+  left: 0;
   right: 0;
   background-color: transparent;
   pointer-events: none;
@@ -110,7 +110,7 @@
   background-color: transparent;
   transform: translate(0);
   color: #656778;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   left: 0px;
   transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
@@ -136,7 +136,7 @@
   background-color: #eaf0fa;
   background-clip: content-box;
   color: #000;
-  transform: translate(0, -17px);
+  transform: translate(0, -18px);
   font-size: 13px;
   font-weight: 400;
 }
@@ -162,7 +162,7 @@
   background-color: transparent;
   transform: translate(0);
   color: #656778;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
 }
@@ -500,7 +500,7 @@
   display: inline-block;
   vertical-align: top;
   white-space: pre-line;
-  font-size: 13px;
+  font-size: 14px;
   position: relative;
   line-height: 18px;
 }
