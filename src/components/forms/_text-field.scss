@@ -4,8 +4,10 @@
   position: relative;
 
   &__input {
-    background-color: $card-background-color;
-    border-radius: $text-field-border-radius;
+    background-color: $background;
+    border-radius: 0px;
+    border-top-right-radius: $text-field-border-radius;
+    border-top-left-radius: $text-field-border-radius;
     border: 1px solid $text-field-unfocused-color;
     height: $text-field-height;
     font-weight: $text-field-font-weight;
@@ -13,35 +15,27 @@
     outline: none;
     padding: 0 0.5rem;
     transition: border-bottom $transition-duration ease-in;
-    width: 175px;
+    width: 215px;
 
     &:focus {
-      border: 1px solid $text-field-accent-color;
-
-      + label {
-        color: $text-field-accent-color;
-      }
+      border: 1px solid $border-color;
+      color: $text-field-accent-color;
+    }
+    &:not(:placeholder-shown)
+      + .text-field__input__placeholder
+      .text-field__input__placeholder__label {
+      display: none;
     }
     &:focus
-      + .text-field__input__placeholder
-      .text-field__input__placeholder__label,
-    &:not(:placeholder-shown)
       + .text-field__input__placeholder
       .text-field__input__placeholder__label {
       background-color: $background;
       background-clip: content-box;
-      color: $black-color;
+      color: $text-field-accent-color;
       transform: translate(0, -18px);
       font-size: 13px;
       font-weight: $text-field-font-weight;
-    }
-    &:focus
-      + .text-field__input__placeholder
-      .text-field__input__placeholder__label {
-      border-color: $black-color;
-      color: $text-field-placeholder-color;
-      font-size: 13px;
-      font-weight: $text-field-font-weight;
+      display: block;
     }
 
     &__placeholder {
@@ -72,54 +66,48 @@
   }
 
   &__color {
-    background-color: $card-background-color;
-    border-radius: $text-field-border-radius;
+    background-color: $background;
+    border-radius: 0px;
+    border-top-right-radius: $text-field-border-radius;
+    border-top-left-radius: $text-field-border-radius;
     border: 1px solid $text-field-unfocused-color;
     height: $text-field-height;
     font-weight: $text-field-font-weight;
     line-height: $text-field-height;
     outline: none;
-    width: 175px;
+    width: 215px;
     padding: 0 0.5rem;
     transition: border-bottom $transition-duration ease-in;
 
     &:focus {
-      border: 1px solid $text-field-accent-color;
-
-      + label {
-        color: $text-field-accent-color;
-      }
+      border: 1px solid $border-color;
+      color: $text-field-accent-color;
     }
     &:focus
       + .text-field__color__placeholder
-      .text-field__color__placeholder__label,
-    &:not(:placeholder-shown)
-      + .text-field__color__placeholder
       .text-field__color__placeholder__label {
+      display: block !important;
       background-color: $background;
       background-clip: content-box;
-      color: $black-color;
+      color: $text-field-accent-color;
       transform: translate(0, -18px);
       font-size: 13px;
       font-weight: $text-field-font-weight;
     }
-    &:focus
+    &:not(:placeholder-shown)
       + .text-field__color__placeholder
       .text-field__color__placeholder__label {
-      border-color: $black-color;
-      color: $text-field-placeholder-color;
-      font-size: 13px;
-      font-weight: $text-field-font-weight;
+      display: none;
     }
 
     &__picker {
       cursor: pointer;
       height: 24px;
       width: 24px;
-      background: black;
       content: "";
-      left: 145px;
+      left: 185px;
       position: absolute;
+      border: $text-field-color-picker-border;
       top: 6px;
     }
 
@@ -153,43 +141,36 @@
 
   &__textarea {
     background: $background !important;
-    border-radius: $text-field-border-radius;
+    border-radius: 0px;
+    border-top-right-radius: $text-field-border-radius;
+    border-top-left-radius: $text-field-border-radius;
     border: 1px solid $text-field-unfocused-color;
     height: $text-field-height;
     font-weight: $text-field-font-weight;
     padding: 10px;
     transition: border-bottom $transition-duration ease-in;
     resize: none;
-    width: 175px;
+    width: 215px;
 
     &:focus {
-      border: 1px solid $text-field-accent-color;
+      border: 1px solid $border-color;
       outline: none !important;
-
-      + label {
-        color: $text-field-accent-color;
-      }
     }
     &:focus
-      + .text-field__textarea__placeholder
-      .text-field__textarea__placeholder__label,
-    &:not(:placeholder-shown)
       + .text-field__textarea__placeholder
       .text-field__textarea__placeholder__label {
       background-color: $background;
       background-clip: content-box;
-      color: $black-color;
-      transform: translate(0, -18px);
+      color: $text-field-accent-color;
+      transform: translate(0, -14px);
       font-size: 13px;
       font-weight: $text-field-font-weight;
+      display: block !important;
     }
-    &:focus
+    &:not(:placeholder-shown)
       + .text-field__textarea__placeholder
       .text-field__textarea__placeholder__label {
-      border-color: $black-color;
-      color: $text-field-placeholder-color;
-      font-size: 13px;
-      font-weight: $text-field-font-weight;
+      display: none;
     }
 
     &__placeholder {

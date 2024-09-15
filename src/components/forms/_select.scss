@@ -4,22 +4,12 @@
   &__select {
     position: relative;
     background: $background;
-    padding: 10px;
-    font-size: 16px;
+    padding: 10px 3px 7px 10px;
     font-weight: 300;
-    border-radius: $select-border-radius;
+    border-radius: 0px;
+    border-top-right-radius: $select-border-radius !important;
+    border-top-left-radius: $select-border-radius !important;
     border: $select-border;
-  }
-  
-  &__label {
-    background-color: $background;
-    background-clip: content-box;
-    color: $black-color;
-    font-size: 13px;
-    font-weight: $text-field-font-weight;
-    top: -8px;
-    left: 8px;
-    transition: 0.2s ease all;
-    position: absolute;
+    width: 215px;
   }
 }
