@@ -122,7 +122,10 @@
   font-weight: 400 !important;
   padding: 10px;
   transition: border-bottom 150ms !important ease-in;
+  overflow: hidden;
+  overflow-wrap: break-word;
   resize: none;
+  height: 55px !important;
   width: 215px;
 }
 .text-field__textarea:focus {
