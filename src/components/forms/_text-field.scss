@@ -8,10 +8,10 @@
     border-radius: 0px;
     border-top-right-radius: $text-field-border-radius;
     border-top-left-radius: $text-field-border-radius;
-    border: 1px solid $text-field-unfocused-color;
+    border: 1px solid $border-color;
     height: $text-field-height;
     font-weight: $text-field-font-weight;
-    line-height: $text-field-height;
+    line-height: $text-field-line-height;
     outline: none;
     padding: 0 0.5rem;
     transition: border-bottom $transition-duration ease-in;
@@ -70,10 +70,10 @@
     border-radius: 0px;
     border-top-right-radius: $text-field-border-radius;
     border-top-left-radius: $text-field-border-radius;
-    border: 1px solid $text-field-unfocused-color;
+    border: 1px solid $border-color;
     height: $text-field-height;
     font-weight: $text-field-font-weight;
-    line-height: $text-field-height;
+    line-height: $text-field-line-height;
     outline: none;
     width: 215px;
     padding: 0 0.5rem;
@@ -144,7 +144,7 @@
     border-radius: 0px;
     border-top-right-radius: $text-field-border-radius;
     border-top-left-radius: $text-field-border-radius;
-    border: 1px solid $text-field-unfocused-color;
+    border: 1px solid $border-color;
     height: $text-field-height;
     font-weight: $text-field-font-weight;
     padding: 10px;

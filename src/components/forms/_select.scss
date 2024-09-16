@@ -4,12 +4,13 @@
   &__select {
     position: relative;
     background: $background;
-    padding: 10px 3px 7px 10px;
+    padding: 3px 3px 3px 10px;
     font-weight: 300;
     border-radius: 0px;
-    border-top-right-radius: $select-border-radius !important;
-    border-top-left-radius: $select-border-radius !important;
-    border: $select-border;
+    border-top-right-radius: $select-border-radius;
+    border-top-left-radius: $select-border-radius;
+    border: 1px solid $border-color;
     width: 215px;
+    height: 36px;
   }
 }
