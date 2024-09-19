@@ -17,7 +17,7 @@
     }
     &__label {
         display: block;
-        padding: 0px 0 0 24px;
+        padding: 1px 0 0 24px;
         color: $black-color;
         font-size: 16px;
         font-weight: $text-field-font-weight;
@@ -28,8 +28,8 @@
             position: absolute;
             top: 4px;
             left: 0;
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
             background-color: transparent;
             border: 2px solid rgba(0, 0, 0 , .54);
             border-radius: 2px;
@@ -42,9 +42,9 @@
             content: '';
             position: absolute;
             top: 6px;
-            left: 5px;
+            left: 6px;
             width: 6px;
-            height: 10px;
+            height: 11px;
             border-bottom: 2px solid transparent;
             border-right: 2px solid transparent;
             transform: rotate(45deg);

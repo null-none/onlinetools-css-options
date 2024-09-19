@@ -145,14 +145,12 @@
     border-top-right-radius: $text-field-border-radius;
     border-top-left-radius: $text-field-border-radius;
     border: 1px solid $border-color;
-    height: $text-field-height;
     font-weight: $text-field-font-weight;
     padding: 10px;
     transition: border-bottom $transition-duration ease-in;
     overflow: hidden;
     overflow-wrap: break-word;
     resize: none;
-    height: 55px !important;
     width: 215px;
 
     &:focus {
