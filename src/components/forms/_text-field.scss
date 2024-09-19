@@ -34,6 +34,7 @@
       color: $text-field-accent-color;
       transform: translate(0, -18px);
       font-size: 13px;
+      line-height: 13px;
       font-weight: $text-field-font-weight;
       display: block;
     }
@@ -92,6 +93,7 @@
       color: $text-field-accent-color;
       transform: translate(0, -18px);
       font-size: 13px;
+      line-height: 13px;
       font-weight: $text-field-font-weight;
     }
     &:not(:placeholder-shown)
@@ -145,6 +147,7 @@
     border-top-right-radius: $text-field-border-radius;
     border-top-left-radius: $text-field-border-radius;
     border: 1px solid $border-color;
+
     font-weight: $text-field-font-weight;
     padding: 10px;
     transition: border-bottom $transition-duration ease-in;
@@ -165,6 +168,7 @@
       color: $text-field-accent-color;
       transform: translate(0, -14px);
       font-size: 13px;
+      line-height: 13px;
       font-weight: $text-field-font-weight;
       display: block !important;
     }
