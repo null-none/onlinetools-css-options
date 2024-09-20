@@ -1,10 +1,10 @@
 {
   "name": "css-online-options",
   "description": "Simple CSS forms.",
-  "repository": "https://github.com/null-none/css-online-options",
+  "repository": "https://github.com/null-none/onlinetools-css-options",
   "license": "MIT",
   "type": "module",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "build": "sass src/material.scss > dist/options.css"
   },
