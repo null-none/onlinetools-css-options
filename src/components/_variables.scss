@@ -29,9 +29,9 @@ $total-columns: 24 !important;
 
 // Comment
 $text-supporting-size: 14px !important;
-$text-supporting-opacity: 0.9;
+$text-supporting-opacity: 0.9 !important;
 
 // Comment
 $comment-border-radius: 8px !important;
 $comment-border: 1px dashed $black-color;
-$comment-font-size: 14px;
+$comment-font-size: 14px !important;

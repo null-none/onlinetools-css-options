@@ -179,7 +179,6 @@
 .checkbox {
   display: inline-block;
   position: relative;
-  margin: 0 0 10px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -241,7 +240,6 @@
 .radio {
   display: inline-block;
   position: relative;
-  margin: 0 0 10px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -615,8 +613,7 @@
 }
 .text__supporting {
   display: inline-block;
-  font-size: 13px;
-  opacity: 0.9;
+  opacity: 0.9 !important;
   padding-top: 3px;
   position: relative;
   vertical-align: top;
