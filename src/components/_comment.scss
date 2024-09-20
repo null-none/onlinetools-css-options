@@ -1,7 +1,7 @@
 .option-row.is-comment {
   label:before {
     content: "";
-    top: 7px;
+    top: 8px;
     left: 3px;
     position: absolute;
     display: block;
@@ -22,7 +22,6 @@
   }
   &__supporting {
     display: inline-block;
-    opacity: $text-supporting-opacity;
     padding-top: 3px;
     position: relative;
     vertical-align: top;

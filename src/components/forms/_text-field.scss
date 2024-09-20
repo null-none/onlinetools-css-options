@@ -111,6 +111,18 @@
       position: absolute;
       border: $text-field-color-picker-border;
       top: 6px;
+      z-index: 1;
+
+      &__background {
+        position: absolute;
+        z-index: 1;
+        height: 24px;
+        width: 24px;
+        content: "";
+        left: 185px;
+        background: repeating-conic-gradient(#efefef 0%, #efefef 25%, transparent 0%, transparent 50%) 50% center / 10px 10px;
+        top: 6px;
+      }
     }
 
     &__placeholder {

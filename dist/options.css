@@ -92,6 +92,17 @@
   position: absolute;
   border: 1px solid #eee !important;
   top: 6px;
+  z-index: 1;
+}
+.text-field__color__picker__background {
+  position: absolute;
+  z-index: 1;
+  height: 24px;
+  width: 24px;
+  content: "";
+  left: 185px;
+  background: repeating-conic-gradient(#efefef 0%, #efefef 25%, transparent 0%, transparent 50%) 50% center/10px 10px;
+  top: 6px;
 }
 .text-field__color__placeholder {
   position: absolute;
@@ -295,67 +306,6 @@
   outline: 1px dotted currentColor;
 }
 
-.switch {
-  display: inline-block;
-  position: relative;
-  margin: 0 0 10px;
-  font-size: 16px;
-  line-height: 24px;
-}
-.switch__input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 36px;
-  height: 20px;
-  opacity: 0;
-  z-index: 0;
-}
-.switch__label {
-  display: block;
-  padding: 0 0 0 44px;
-  color: #000 !important;
-  font-size: 16px;
-  font-weight: 400 !important;
-  cursor: pointer;
-}
-.switch__label:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 0;
-  width: 36px;
-  height: 14px;
-  background-color: rgba(0, 0, 0, 0.26);
-  border-radius: 14px;
-  z-index: 1;
-  transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.switch__label:after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  z-index: 2;
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: left, background-color;
-}
-.switch__input:checked + .switch__label:before {
-  background-color: rgba(85, 128, 180, 0.5);
-}
-.switch__input:checked + .switch__label:after {
-  left: 16px;
-  background-color: hsl(213, 39%, 52%);
-}
-.switch__input:focus + .switch__label:after {
-  outline: 1px dotted currentColor;
-}
-
 .select {
   position: relative;
 }
@@ -374,63 +324,6 @@
 
 .bg-d1d9e6 .select__select {
   background: #d1d9e6 !important;
-}
-
-[data-tooltip] {
-  position: relative;
-}
-[data-tooltip]:after {
-  content: attr(data-tooltip);
-  position: absolute;
-  white-space: nowrap;
-  background: rgba(97, 97, 97, 0);
-  border-radius: 2px;
-  color: #fff;
-  padding: 8px !important;
-  z-index: 98;
-  font-size: 12px !important;
-  line-height: 12px !important;
-  font-weight: 400;
-  text-transform: none;
-  visibility: hidden;
-  transition: all 150ms !important ease-in;
-  pointer-events: none;
-}
-[data-tooltip]:hover:after {
-  visibility: visible;
-  background: rgba(97, 97, 97, 0.9);
-}
-[data-tooltip].tooltip--top:after {
-  bottom: 100%;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-[data-tooltip].tooltip--top:hover:after {
-  transform: translate(-50%, -8px !important);
-}
-[data-tooltip].tooltip--right:after {
-  bottom: 50%;
-  left: 100%;
-  transform: translate(0, 50%);
-}
-[data-tooltip].tooltip--right:hover:after {
-  transform: translate(8px !important, 50%);
-}
-[data-tooltip].tooltip--bottom:after {
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-[data-tooltip].tooltip--bottom:hover:after {
-  transform: translate(-50%, 8px !important);
-}
-[data-tooltip].tooltip--left:after {
-  bottom: 50%;
-  right: 100%;
-  transform: translate(0, 50%);
-}
-[data-tooltip].tooltip--left:hover:after {
-  transform: translate(-8px !important, 50%);
 }
 
 .grid {
@@ -595,7 +488,7 @@
 
 .option-row.is-comment label:before {
   content: "";
-  top: 7px;
+  top: 8px;
   left: 3px;
   position: absolute;
   display: block;
@@ -613,7 +506,6 @@
 }
 .text__supporting {
   display: inline-block;
-  opacity: 0.9 !important;
   padding-top: 3px;
   position: relative;
   vertical-align: top;

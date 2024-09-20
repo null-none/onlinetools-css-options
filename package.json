@@ -4,7 +4,7 @@
   "repository": "https://github.com/null-none/onlinetools-css-options",
   "license": "MIT",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "sass src/material.scss > dist/options.css"
   },
