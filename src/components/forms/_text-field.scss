@@ -120,7 +120,7 @@
         width: 24px;
         content: "";
         left: 185px;
-        background: repeating-conic-gradient(#efefef 0%, #efefef 25%, transparent 0%, transparent 50%) 50% center / 10px 10px;
+        background: repeating-conic-gradient(#ccc 0%, #ccc 25%, transparent 0%, transparent 50%) 50% center / 10px 10px;
         top: 6px;
       }
     }
@@ -178,7 +178,7 @@
       background-color: $background;
       background-clip: content-box;
       color: $text-field-accent-color;
-      transform: translate(0, -14px);
+      transform: translate(0, -11px);
       font-size: 13px;
       line-height: 13px;
       font-weight: $text-field-font-weight;
