@@ -16,6 +16,10 @@
   }
 } 
 
+.option-row.is-comment:not(:last-child) {
+  padding-bottom: 10px;
+}
+
 .text {
   &__heading {
     color: #000;
