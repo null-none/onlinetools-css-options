@@ -2,23 +2,36 @@
 
 .text-field {
   position: relative;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  border-top: 0px;
+  border-radius: 0px;
+  border-top-right-radius: $text-field-border-radius;
+  border-top-left-radius: $text-field-border-radius;
+  width: min-content;
+
+  &:focus {
+    border-color: $border-color;
+    color: $text-field-accent-color;
+  }
 
   &__input {
-    background-color: $background;
+    border: none;
+    outline: none;
     border-radius: 0px;
     border-top-right-radius: $text-field-border-radius;
     border-top-left-radius: $text-field-border-radius;
-    border: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+    background-color: $background;
     height: $text-field-height;
     font-weight: $text-field-font-weight;
     line-height: $text-field-line-height;
-    outline: none;
     padding: 0 0.5rem;
     transition: border-bottom $transition-duration ease-in;
     width: 215px;
 
     &:focus {
-      border: 1px solid $border-color;
       color: $text-field-accent-color;
     }
     &:not(:placeholder-shown)
@@ -66,21 +79,21 @@
   }
 
   &__color {
-    background-color: $background;
+    border: none;
+    outline: none;
     border-radius: 0px;
     border-top-right-radius: $text-field-border-radius;
     border-top-left-radius: $text-field-border-radius;
-    border: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+    background-color: $background;
     height: $text-field-height;
     font-weight: $text-field-font-weight;
     line-height: $text-field-line-height;
-    outline: none;
-    width: 215px;
     padding: 0 0.5rem;
     transition: border-bottom $transition-duration ease-in;
+    width: 215px;
 
     &:focus {
-      border: 1px solid $border-color;
       color: $text-field-accent-color;
     }
     &:focus
@@ -153,11 +166,12 @@
 
   &__textarea {
     background: $background !important;
+    border: none;
+    outline: none;
     border-radius: 0px;
     border-top-right-radius: $text-field-border-radius;
     border-top-left-radius: $text-field-border-radius;
-    border: 1px solid $border-color;
-
+    border-top: 1px solid $border-color;
     font-weight: $text-field-font-weight;
     padding: 10px;
     transition: border-bottom $transition-duration ease-in;
@@ -165,12 +179,8 @@
     overflow-wrap: break-word;
     resize: none;
     width: 215px;
-    margin-bottom: -3px;
 
-    &:focus {
-      border: 1px solid $border-color;
-      outline: none !important;
-    }
+
     &:focus
       + .text-field__textarea__placeholder
       .text-field__textarea__placeholder__label {
