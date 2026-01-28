@@ -1,5 +1,13 @@
 // Checkbox
 .checkbox {
+    box-sizing: border-box;
+
+    & *,
+    & *::before,
+    & *::after {
+        box-sizing: inherit;
+    } 
+       
     display: inline-block;
     position: relative;
     font-size: 16px;

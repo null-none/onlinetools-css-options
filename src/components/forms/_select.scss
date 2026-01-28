@@ -1,4 +1,12 @@
 .select {
+  box-sizing: border-box;
+
+  & *,
+  & *::before,
+  & *::after {
+      box-sizing: inherit;
+  }
+    
   color: $black-color;
   position: relative;
   background: $background;

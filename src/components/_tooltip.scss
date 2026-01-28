@@ -1,5 +1,13 @@
 // Tooltip
 [data-tooltip] {
+    box-sizing: border-box;
+
+    & *,
+    & *::before,
+    & *::after {
+        box-sizing: inherit;
+    }
+
     position: relative;
 
     // Content

@@ -1,4 +1,12 @@
 .switch {
+    box-sizing: border-box;
+
+    & *,
+    & *::before,
+    & *::after {
+        box-sizing: inherit;
+    }
+
     display: inline-block;
     position: relative;
     margin: 0 0 10px;
