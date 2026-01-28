@@ -21,6 +21,14 @@
 }
 
 .text {
+  box-sizing: border-box;
+
+  & *,
+  & *::before,
+  & *::after {
+      box-sizing: inherit;
+  } 
+
   &__heading {
     color: #000;
   }

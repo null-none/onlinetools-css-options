@@ -1,6 +1,14 @@
 // Text Fields
 
 .text-field {
+  box-sizing: border-box;
+
+  & *,
+  & *::before,
+  & *::after {
+      box-sizing: inherit;
+  }
+
   position: relative;
   border-left: 1px solid $border-color;
   border-right: 1px solid $border-color;

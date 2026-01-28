@@ -1,9 +1,18 @@
 // Radio buttons
 .radio {
+    box-sizing: border-box;
+
+    & *,
+    & *::before,
+    & *::after {
+        box-sizing: inherit;
+    }
+
     display: inline-block;
     position: relative;
     font-size: 16px;
     line-height: 24px;
+
     &__input {
         position: absolute;
         top: 4px;

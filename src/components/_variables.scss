@@ -1,10 +1,10 @@
 // Global
-$transition-duration: 150ms !important;
+$transition-duration: 150ms;
 $primary-color: hsl(213, 39%, 52%) !default;
 $gray-color: #9e9e9e !important;
 $border-color: $gray-color;
-$black-color: #000 !important;
-$background: #fff !important;
+$black-color: #000;
+$background: #fff;
 
 // Forms
 $text-field-border-radius: 4px !important;
@@ -20,9 +20,9 @@ $text-field-accent-border: 1px solid $border-color;
 $select-border-radius: 4px !important;
 
 // Tooltips
-$tooltip-font-size: 12px !important;
-$tooltip-padding: 8px !important;
-$tooltip-margin: 8px !important;
+$tooltip-font-size: 12px;
+$tooltip-padding: 8px;
+$tooltip-margin: 8px;
 
 // Grid
 $total-columns: 24 !important;
